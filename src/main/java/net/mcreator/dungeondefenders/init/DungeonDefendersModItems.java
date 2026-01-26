@@ -28,6 +28,7 @@ public class DungeonDefendersModItems {
 	public static final DeferredItem<Item> MANA_RESET;
 	public static final DeferredItem<Item> CRYSTAL_SPAWN_EGG;
 	public static final DeferredItem<Item> MANA_CHEST;
+	public static final DeferredItem<Item> SPIKE_BLOCKADE_SPAWN_EGG;
 	static {
 		MANA_TEST_1 = register("mana_test_1", ManaTest1Item::new);
 		MANA_TEST_5 = register("mana_test_5", ManaTest5Item::new);
@@ -38,6 +39,7 @@ public class DungeonDefendersModItems {
 		MANA_RESET = register("mana_reset", ManaResetItem::new);
 		CRYSTAL_SPAWN_EGG = register("crystal_spawn_egg", properties -> new SpawnEggItem(DungeonDefendersModEntities.CRYSTAL.get(), properties));
 		MANA_CHEST = block(DungeonDefendersModBlocks.MANA_CHEST, new Item.Properties().fireResistant());
+		SPIKE_BLOCKADE_SPAWN_EGG = register("spike_blockade_spawn_egg", properties -> new SpawnEggItem(DungeonDefendersModEntities.SPIKE_BLOCKADE.get(), properties));
 	}
 
 	// Start of user code block custom items

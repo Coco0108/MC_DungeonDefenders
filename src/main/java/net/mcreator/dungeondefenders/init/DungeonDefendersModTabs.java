@@ -5,14 +5,19 @@ package net.mcreator.dungeondefenders.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.dungeondefenders.DungeonDefendersMod;
 
+@EventBusSubscriber
 public class DungeonDefendersModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DungeonDefendersMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GAMEPLAY = REGISTRY.register("gameplay",
@@ -27,4 +32,11 @@ public class DungeonDefendersModTabs {
 				tabData.accept(DungeonDefendersModItems.CRYSTAL_SPAWN_EGG.get());
 				tabData.accept(DungeonDefendersModBlocks.MANA_CHEST.get().asItem());
 			}).build());
+
+	@SubscribeEvent
+	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
+		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+			tabData.accept(DungeonDefendersModItems.SPIKE_BLOCKADE_SPAWN_EGG.get());
+		}
+	}
 }
