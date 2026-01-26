@@ -37,6 +37,7 @@ public class DungeonDefendersModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 			tabData.accept(DungeonDefendersModItems.SPIKE_BLOCKADE_SPAWN_EGG.get());
+			tabData.accept(DungeonDefendersModItems.GOBELIN_SPAWN_EGG.get());
 		}
 	}
 }

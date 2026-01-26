@@ -9,6 +9,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.dungeondefenders.client.model.Modelspikewall;
+import net.mcreator.dungeondefenders.client.model.ModelPetitbelin;
 import net.mcreator.dungeondefenders.client.model.ModelCrystal;
 
 @EventBusSubscriber(Dist.CLIENT)
@@ -17,5 +18,6 @@ public class DungeonDefendersModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelspikewall.LAYER_LOCATION, Modelspikewall::createBodyLayer);
 		event.registerLayerDefinition(ModelCrystal.LAYER_LOCATION, ModelCrystal::createBodyLayer);
+		event.registerLayerDefinition(ModelPetitbelin.LAYER_LOCATION, ModelPetitbelin::createBodyLayer);
 	}
 }
