@@ -481,13 +481,13 @@
     "files": [
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlocks.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModItems.java",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntities.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntityRenderers.java",
-      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntities.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/dungeondefenders/DungeonDefendersMod.java",
+      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java"
     ]
   },
