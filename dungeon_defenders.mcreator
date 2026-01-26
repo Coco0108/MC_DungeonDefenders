@@ -1,0 +1,548 @@
+{
+  "mod_elements": [
+    {
+      "name": "ManaOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/client/screens/ManaOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "GetManaCurrent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_mana_current",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetManaCurrentProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaAdd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_add",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ManaAddProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "Gameplay",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gameplay",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Gameplay"
+    },
+    {
+      "name": "ManaAddPossible",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_add_possible",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "ManaValue",
+            "type": "number"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ManaAddPossibleProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaTest1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_test_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_1.json",
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_1.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest1Item.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaTest5",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_test_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_5.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest5Item.java",
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_5.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaTest10",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_test_10",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_10.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest10Item.java",
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_10.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaTest50",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_test_50",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_50.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest50Item.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_50.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaTest500",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_test_500",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest500Item.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_500.json",
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_500.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaTest2000",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_test_2000",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest2000Item.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_2000.json",
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_2000.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaDrop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "ManaValue",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ManaDropProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ProcedureManaReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "procedure_mana_reset",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ProcedureManaResetProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ManaReset",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaResetItem.java",
+          "src/main/resources/assets/dungeon_defenders/items/mana_reset.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_reset.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "Crystal",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/items/crystal_spawn_egg.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/CrystalRenderer.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/crystal_spawn_egg.json",
+          "src/main/java/net/mcreator/dungeondefenders/entity/CrystalEntity.java"
+        ]
+      },
+      "path": "~/Gameplay/Crystal"
+    },
+    {
+      "name": "GameOver",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "game_over",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/client/screens/GameOverOverlay.java"
+        ]
+      },
+      "path": "~/Gameplay/Crystal"
+    },
+    {
+      "name": "CrystalDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/CrystalDiesProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Crystal"
+    },
+    {
+      "name": "ShowGameOver",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_game_over",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ShowGameOverProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Crystal"
+    },
+    {
+      "name": "ManaChest",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_chest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_chest.json",
+          "src/main/resources/assets/dungeon_defenders/items/mana_chest.json",
+          "src/main/resources/assets/dungeon_defenders/blockstates/mana_chest.json",
+          "src/main/java/net/mcreator/dungeondefenders/block/ManaChestBlock.java",
+          "src/main/resources/data/dungeon_defenders/loot_table/blocks/mana_chest.json",
+          "src/main/resources/assets/dungeon_defenders/models/block/mana_chest.json"
+        ]
+      },
+      "path": "~/Gameplay/Chest"
+    },
+    {
+      "name": "ChestOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_open",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ChestOpenProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Chest"
+    },
+    {
+      "name": "ChestManaDrop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_mana_drop",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "ManaValue",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ChestManaDropProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Chest"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Mana_Max",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "20.0"
+    },
+    {
+      "name": "Mana_Current",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Wave_Max",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "Wave_Current",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "IsGameOver",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ChestManaValue",
+      "type": "number",
+      "scope": "map",
+      "value": "8.0"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "gui.dungeon_defenders.mana_overlay.label_mana": "Mana : ",
+      "item_group.dungeon_defenders.gameplay": "Gameplay",
+      "item.dungeon_defenders.mana_test_1": "Mana Test 1",
+      "item.dungeon_defenders.mana_test_5": "Mana Test 5",
+      "item.dungeon_defenders.mana_test_10": "Mana Test 10",
+      "item.dungeon_defenders.mana_test_50": "Mana Test 50",
+      "item.dungeon_defenders.mana_test_500": "Mana Test 500",
+      "item.dungeon_defenders.mana_test_2000": "Mana Test 2000",
+      "item.dungeon_defenders.mana_reset": "Mana Reset",
+      "entity.dungeon_defenders.crystal": "Crystal",
+      "item.dungeon_defenders.crystal_spawn_egg": "Crystal Spawn Egg",
+      "gui.dungeon_defenders.game_over.label_game_over": "Game Over",
+      "item.dungeon_defenders.mana_chest": "Mana Chest"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlocks.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModItems.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntities.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntityRenderers.java",
+      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/dungeondefenders/DungeonDefendersMod.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Gameplay",
+        "children": [
+          {
+            "name": "Mana",
+            "children": []
+          },
+          {
+            "name": "Crystal",
+            "children": []
+          },
+          {
+            "name": "Chest",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Ennemies",
+        "children": []
+      },
+      {
+        "name": "Tower",
+        "children": []
+      },
+      {
+        "name": "Weapons",
+        "children": []
+      },
+      {
+        "name": "Maps",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "dungeon_defenders",
+    "modName": "Dungeon Defenders",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.8",
+    "modElementsPackage": "net.mcreator.dungeondefenders"
+  },
+  "mcreatorVersion": 202500345720
+}

@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mana",
+          "text": {
+            "fixedValue": "Mana : "
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 24,
+          "y": 8,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_mana_current",
+          "text": {
+            "fixedValue": "",
+            "name": "GetManaCurrent"
+          },
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "anchorPoint": "CENTER",
+          "x": 60,
+          "y": 8,
+          "locked": false
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

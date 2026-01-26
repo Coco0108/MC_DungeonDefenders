@@ -1,0 +1,15 @@
+{
+  "gui.dungeon_defenders.mana_overlay.label_mana": "Mana : ",
+  "item_group.dungeon_defenders.gameplay": "Gameplay",
+  "item.dungeon_defenders.mana_test_1": "Mana Test 1",
+  "item.dungeon_defenders.mana_test_5": "Mana Test 5",
+  "item.dungeon_defenders.mana_test_10": "Mana Test 10",
+  "item.dungeon_defenders.mana_test_50": "Mana Test 50",
+  "item.dungeon_defenders.mana_test_500": "Mana Test 500",
+  "item.dungeon_defenders.mana_test_2000": "Mana Test 2000",
+  "item.dungeon_defenders.mana_reset": "Mana Reset",
+  "entity.dungeon_defenders.crystal": "Crystal",
+  "item.dungeon_defenders.crystal_spawn_egg": "Crystal Spawn Egg",
+  "gui.dungeon_defenders.game_over.label_game_over": "Game Over",
+  "item.dungeon_defenders.mana_chest": "Mana Chest"
+}

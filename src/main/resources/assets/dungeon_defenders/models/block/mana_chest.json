@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/chiseled_bookshelf_top",
+    "up": "minecraft:block/lectern_top",
+    "north": "minecraft:block/lectern_front",
+    "east": "minecraft:block/chiseled_bookshelf_side",
+    "south": "minecraft:block/chiseled_bookshelf_side",
+    "west": "minecraft:block/chiseled_bookshelf_side",
+    "particle": "minecraft:block/chiseled_bookshelf_top"
+  },
+  "render_type": "solid"
+}
