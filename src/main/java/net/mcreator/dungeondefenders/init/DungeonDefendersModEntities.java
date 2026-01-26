@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.dungeondefenders.entity.SpikeBlockadeEntity;
+import net.mcreator.dungeondefenders.entity.OrcEntity;
 import net.mcreator.dungeondefenders.entity.GobelinEntity;
 import net.mcreator.dungeondefenders.entity.CrystalEntity;
 import net.mcreator.dungeondefenders.DungeonDefendersMod;
@@ -37,6 +38,9 @@ public class DungeonDefendersModEntities {
 			EntityType.Builder.<GobelinEntity>of(GobelinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<OrcEntity>> ORC = register("orc", EntityType.Builder.<OrcEntity>of(OrcEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+			.sized(1f, 2f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -49,6 +53,7 @@ public class DungeonDefendersModEntities {
 		CrystalEntity.init(event);
 		SpikeBlockadeEntity.init(event);
 		GobelinEntity.init(event);
+		OrcEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -56,5 +61,6 @@ public class DungeonDefendersModEntities {
 		event.put(CRYSTAL.get(), CrystalEntity.createAttributes().build());
 		event.put(SPIKE_BLOCKADE.get(), SpikeBlockadeEntity.createAttributes().build());
 		event.put(GOBELIN.get(), GobelinEntity.createAttributes().build());
+		event.put(ORC.get(), OrcEntity.createAttributes().build());
 	}
 }

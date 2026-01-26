@@ -3,9 +3,9 @@ package net.mcreator.dungeondefenders.entity;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 
-public class GobelinEntity extends Monster {
+public class OrcEntity extends Monster {
 
-	public GobelinEntity(EntityType<GobelinEntity> type, Level world) {
+	public OrcEntity(EntityType<OrcEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
@@ -42,7 +42,7 @@ public class GobelinEntity extends Monster {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(DungeonDefendersModEntities.GOBELIN.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		event.register(DungeonDefendersModEntities.ORC.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
 				RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}

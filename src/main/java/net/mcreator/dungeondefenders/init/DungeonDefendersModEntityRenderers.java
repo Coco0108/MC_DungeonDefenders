@@ -9,6 +9,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.dungeondefenders.client.renderer.SpikeBlockadeRenderer;
+import net.mcreator.dungeondefenders.client.renderer.OrcRenderer;
 import net.mcreator.dungeondefenders.client.renderer.GobelinRenderer;
 import net.mcreator.dungeondefenders.client.renderer.CrystalRenderer;
 
@@ -19,5 +20,6 @@ public class DungeonDefendersModEntityRenderers {
 		event.registerEntityRenderer(DungeonDefendersModEntities.CRYSTAL.get(), CrystalRenderer::new);
 		event.registerEntityRenderer(DungeonDefendersModEntities.SPIKE_BLOCKADE.get(), SpikeBlockadeRenderer::new);
 		event.registerEntityRenderer(DungeonDefendersModEntities.GOBELIN.get(), GobelinRenderer::new);
+		event.registerEntityRenderer(DungeonDefendersModEntities.ORC.get(), OrcRenderer::new);
 	}
 }

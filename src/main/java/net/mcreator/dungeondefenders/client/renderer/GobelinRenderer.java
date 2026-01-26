@@ -1,13 +1,5 @@
 package net.mcreator.dungeondefenders.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-
-import net.mcreator.dungeondefenders.entity.GobelinEntity;
-import net.mcreator.dungeondefenders.client.model.ModelPetitbelin;
-
 public class GobelinRenderer extends MobRenderer<GobelinEntity, LivingEntityRenderState, ModelPetitbelin> {
 	private GobelinEntity entity = null;
 
