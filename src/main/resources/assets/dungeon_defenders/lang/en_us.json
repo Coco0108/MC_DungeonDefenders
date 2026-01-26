@@ -13,5 +13,7 @@
   "gui.dungeon_defenders.game_over.label_game_over": "Game Over",
   "item.dungeon_defenders.mana_chest": "Mana Chest",
   "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
-  "entity.dungeon_defenders.spike_blockade": "Spike Blockade"
+  "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
+  "entity.dungeon_defenders.orc": "Orc",
+  "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg"
 }

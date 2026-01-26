@@ -9,12 +9,14 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.dungeondefenders.client.model.Modelspikewall;
+import net.mcreator.dungeondefenders.client.model.Modelorc;
 import net.mcreator.dungeondefenders.client.model.ModelCrystal;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class DungeonDefendersModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelorc.LAYER_LOCATION, Modelorc::createBodyLayer);
 		event.registerLayerDefinition(Modelspikewall.LAYER_LOCATION, Modelspikewall::createBodyLayer);
 		event.registerLayerDefinition(ModelCrystal.LAYER_LOCATION, ModelCrystal::createBodyLayer);
 	}

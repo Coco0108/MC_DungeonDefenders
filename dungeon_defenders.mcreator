@@ -434,6 +434,23 @@
         ]
       },
       "path": "~/Tower"
+    },
+    {
+      "name": "Orc",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/entity/OrcEntity.java",
+          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/orc_biome_modifier.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/OrcRenderer.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/orc_spawn_egg.json",
+          "src/main/resources/assets/dungeon_defenders/items/orc_spawn_egg.json"
+        ]
+      },
+      "path": "~/Ennemies"
     }
   ],
   "variable_elements": [
@@ -493,7 +510,9 @@
       "gui.dungeon_defenders.game_over.label_game_over": "Game Over",
       "item.dungeon_defenders.mana_chest": "Mana Chest",
       "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
-      "entity.dungeon_defenders.spike_blockade": "Spike Blockade"
+      "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
+      "entity.dungeon_defenders.orc": "Orc",
+      "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg"
     }
   },
   "metadata": {
