@@ -18,8 +18,8 @@ public class DungeonDefendersModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(DungeonDefendersModEntities.CRYSTAL.get(), CrystalRenderer::new);
-		event.registerEntityRenderer(DungeonDefendersModEntities.SPIKE_BLOCKADE.get(), SpikeBlockadeRenderer::new);
 		event.registerEntityRenderer(DungeonDefendersModEntities.GOBELIN.get(), GobelinRenderer::new);
 		event.registerEntityRenderer(DungeonDefendersModEntities.ORC.get(), OrcRenderer::new);
+		event.registerEntityRenderer(DungeonDefendersModEntities.SPIKE_BLOCKADE.get(), SpikeBlockadeRenderer::new);
 	}
 }

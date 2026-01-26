@@ -115,9 +115,9 @@
       "registry_name": "mana_test_1",
       "metadata": {
         "files": [
-          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_1.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest1Item.java",
           "src/main/resources/assets/dungeon_defenders/items/mana_test_1.json",
-          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest1Item.java"
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_1.json"
         ]
       },
       "path": "~/Gameplay/Mana"
@@ -131,8 +131,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/dungeon_defenders/models/item/mana_test_5.json",
-          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest5Item.java",
-          "src/main/resources/assets/dungeon_defenders/items/mana_test_5.json"
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_5.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest5Item.java"
         ]
       },
       "path": "~/Gameplay/Mana"
@@ -145,9 +145,9 @@
       "registry_name": "mana_test_10",
       "metadata": {
         "files": [
-          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_10.json",
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_10.json",
           "src/main/java/net/mcreator/dungeondefenders/item/ManaTest10Item.java",
-          "src/main/resources/assets/dungeon_defenders/items/mana_test_10.json"
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_10.json"
         ]
       },
       "path": "~/Gameplay/Mana"
@@ -160,9 +160,9 @@
       "registry_name": "mana_test_50",
       "metadata": {
         "files": [
-          "src/main/resources/assets/dungeon_defenders/items/mana_test_50.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_50.json",
           "src/main/java/net/mcreator/dungeondefenders/item/ManaTest50Item.java",
-          "src/main/resources/assets/dungeon_defenders/models/item/mana_test_50.json"
+          "src/main/resources/assets/dungeon_defenders/items/mana_test_50.json"
         ]
       },
       "path": "~/Gameplay/Mana"
@@ -175,8 +175,8 @@
       "registry_name": "mana_test_500",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest500Item.java",
           "src/main/resources/assets/dungeon_defenders/models/item/mana_test_500.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest500Item.java",
           "src/main/resources/assets/dungeon_defenders/items/mana_test_500.json"
         ]
       },
@@ -190,8 +190,8 @@
       "registry_name": "mana_test_2000",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest2000Item.java",
           "src/main/resources/assets/dungeon_defenders/models/item/mana_test_2000.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaTest2000Item.java",
           "src/main/resources/assets/dungeon_defenders/items/mana_test_2000.json"
         ]
       },
@@ -259,8 +259,8 @@
       "registry_name": "mana_reset",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/item/ManaResetItem.java",
           "src/main/resources/assets/dungeon_defenders/items/mana_reset.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/ManaResetItem.java",
           "src/main/resources/assets/dungeon_defenders/models/item/mana_reset.json"
         ]
       },
@@ -275,8 +275,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/dungeon_defenders/items/crystal_spawn_egg.json",
-          "src/main/java/net/mcreator/dungeondefenders/client/renderer/CrystalRenderer.java",
           "src/main/resources/assets/dungeon_defenders/models/item/crystal_spawn_egg.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/CrystalRenderer.java",
           "src/main/java/net/mcreator/dungeondefenders/entity/CrystalEntity.java"
         ]
       },
@@ -342,12 +342,12 @@
       "registry_name": "mana_chest",
       "metadata": {
         "files": [
-          "src/main/resources/assets/dungeon_defenders/models/item/mana_chest.json",
-          "src/main/resources/assets/dungeon_defenders/items/mana_chest.json",
+          "src/main/resources/assets/dungeon_defenders/models/block/mana_chest.json",
           "src/main/resources/assets/dungeon_defenders/blockstates/mana_chest.json",
+          "src/main/resources/assets/dungeon_defenders/items/mana_chest.json",
           "src/main/java/net/mcreator/dungeondefenders/block/ManaChestBlock.java",
-          "src/main/resources/data/dungeon_defenders/loot_table/blocks/mana_chest.json",
-          "src/main/resources/assets/dungeon_defenders/models/block/mana_chest.json"
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_chest.json",
+          "src/main/resources/data/dungeon_defenders/loot_table/blocks/mana_chest.json"
         ]
       },
       "path": "~/Gameplay/Chest"
@@ -419,6 +419,40 @@
       "path": "~/Gameplay/Chest"
     },
     {
+      "name": "Gobelin",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gobelin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/GobelinRenderer.java",
+          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/gobelin_biome_modifier.json",
+          "src/main/java/net/mcreator/dungeondefenders/entity/GobelinEntity.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/gobelin_spawn_egg.json",
+          "src/main/resources/assets/dungeon_defenders/items/gobelin_spawn_egg.json"
+        ]
+      },
+      "path": "~/Ennemies"
+    },
+    {
+      "name": "Orc",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/entity/OrcEntity.java",
+          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/orc_biome_modifier.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/OrcRenderer.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/orc_spawn_egg.json",
+          "src/main/resources/assets/dungeon_defenders/items/orc_spawn_egg.json"
+        ]
+      },
+      "path": "~/Ennemies"
+    },
+    {
       "name": "SpikeBlockade",
       "type": "livingentity",
       "compiles": true,
@@ -434,40 +468,6 @@
         ]
       },
       "path": "~/Tower"
-    },
-    {
-      "name": "Gobelin",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gobelin",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/gobelin_biome_modifier.json",
-          "src/main/resources/assets/dungeon_defenders/models/item/gobelin_spawn_egg.json",
-          "src/main/java/net/mcreator/dungeondefenders/client/renderer/GobelinRenderer.java",
-          "src/main/resources/assets/dungeon_defenders/items/gobelin_spawn_egg.json",
-          "src/main/java/net/mcreator/dungeondefenders/entity/GobelinEntity.java"
-        ]
-      },
-      "path": "~/Ennemies"
-    },
-    {
-      "name": "Orc",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "orc",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/dungeon_defenders/models/item/orc_spawn_egg.json",
-          "src/main/java/net/mcreator/dungeondefenders/client/renderer/OrcRenderer.java",
-          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/orc_biome_modifier.json",
-          "src/main/java/net/mcreator/dungeondefenders/entity/OrcEntity.java",
-          "src/main/resources/assets/dungeon_defenders/items/orc_spawn_egg.json"
-        ]
-      },
-      "path": "~/Ennemies"
     }
   ],
   "variable_elements": [
@@ -526,6 +526,10 @@
       "item.dungeon_defenders.crystal_spawn_egg": "Crystal Spawn Egg",
       "gui.dungeon_defenders.game_over.label_game_over": "Game Over",
       "item.dungeon_defenders.mana_chest": "Mana Chest",
+      "item.dungeon_defenders.gobelin_spawn_egg": "Gobelin Spawn Egg",
+      "entity.dungeon_defenders.gobelin": "Gobelin",
+      "entity.dungeon_defenders.orc": "Orc",
+      "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg",
       "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
       "entity.dungeon_defenders.spike_blockade": "Spike Blockade"
     }

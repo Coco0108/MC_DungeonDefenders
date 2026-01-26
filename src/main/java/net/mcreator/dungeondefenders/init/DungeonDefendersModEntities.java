@@ -30,10 +30,6 @@ public class DungeonDefendersModEntities {
 			EntityType.Builder.<CrystalEntity>of(CrystalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(1).setUpdateInterval(3)
 
 					.sized(1f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<SpikeBlockadeEntity>> SPIKE_BLOCKADE = register("spike_blockade",
-			EntityType.Builder.<SpikeBlockadeEntity>of(SpikeBlockadeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(2f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GobelinEntity>> GOBELIN = register("gobelin",
 			EntityType.Builder.<GobelinEntity>of(GobelinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -41,6 +37,10 @@ public class DungeonDefendersModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<OrcEntity>> ORC = register("orc", EntityType.Builder.<OrcEntity>of(OrcEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 			.sized(1f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SpikeBlockadeEntity>> SPIKE_BLOCKADE = register("spike_blockade",
+			EntityType.Builder.<SpikeBlockadeEntity>of(SpikeBlockadeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(2f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -51,16 +51,16 @@ public class DungeonDefendersModEntities {
 	@SubscribeEvent
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		CrystalEntity.init(event);
-		SpikeBlockadeEntity.init(event);
 		GobelinEntity.init(event);
 		OrcEntity.init(event);
+		SpikeBlockadeEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(CRYSTAL.get(), CrystalEntity.createAttributes().build());
-		event.put(SPIKE_BLOCKADE.get(), SpikeBlockadeEntity.createAttributes().build());
 		event.put(GOBELIN.get(), GobelinEntity.createAttributes().build());
 		event.put(ORC.get(), OrcEntity.createAttributes().build());
+		event.put(SPIKE_BLOCKADE.get(), SpikeBlockadeEntity.createAttributes().build());
 	}
 }

@@ -6,13 +6,13 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 
 import net.mcreator.dungeondefenders.entity.SpikeBlockadeEntity;
-import net.mcreator.dungeondefenders.client.model.Modelspikewall;
+import net.mcreator.dungeondefenders.client.model.Modelspikeblockade;
 
-public class SpikeBlockadeRenderer extends MobRenderer<SpikeBlockadeEntity, LivingEntityRenderState, Modelspikewall> {
+public class SpikeBlockadeRenderer extends MobRenderer<SpikeBlockadeEntity, LivingEntityRenderState, Modelspikeblockade> {
 	private SpikeBlockadeEntity entity = null;
 
 	public SpikeBlockadeRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelspikewall(context.bakeLayer(Modelspikewall.LAYER_LOCATION)), 1f);
+		super(context, new Modelspikeblockade(context.bakeLayer(Modelspikeblockade.LAYER_LOCATION)), 1f);
 	}
 
 	@Override
@@ -28,6 +28,6 @@ public class SpikeBlockadeRenderer extends MobRenderer<SpikeBlockadeEntity, Livi
 
 	@Override
 	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
-		return ResourceLocation.parse("dungeon_defenders:textures/entities/spikeblockade.png");
+		return ResourceLocation.parse("dungeon_defenders:textures/entities/spikeblockade3.png");
 	}
 }
