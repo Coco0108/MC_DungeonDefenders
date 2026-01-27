@@ -17,5 +17,6 @@
   "item.dungeon_defenders.gobelin_spawn_egg": "Gobelin Spawn Egg",
   "entity.dungeon_defenders.gobelin": "Gobelin",
   "entity.dungeon_defenders.orc": "Orc",
-  "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg"
+  "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg",
+  "item.dungeon_defenders.spawner": "Spawner"
 }
