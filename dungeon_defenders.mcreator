@@ -602,7 +602,10 @@
     "ENTITIES:dungeon_defenders:tower": [
       "CUSTOM:SpikeBlockade"
     ],
-    "ENTITIES:dungeon_defenders:ennemy": []
+    "ENTITIES:dungeon_defenders:ennemy": [
+      "CUSTOM:Gobelin",
+      "CUSTOM:Orc"
+    ]
   },
   "tab_element_order": {},
   "language_map": {

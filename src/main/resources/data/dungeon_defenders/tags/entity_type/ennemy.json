@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "dungeon_defenders:gobelin",
+    "dungeon_defenders:orc"
+  ]
 }
