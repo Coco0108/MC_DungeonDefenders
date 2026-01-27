@@ -1,15 +1,5 @@
 package net.mcreator.dungeondefenders.item;
 
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-
-import net.mcreator.dungeondefenders.procedures.ManaAddProcedure;
-
-import javax.annotation.Nullable;
-
 public class ManaTest1Item extends Item {
 	public ManaTest1Item(Item.Properties properties) {
 		super(properties.stacksTo(1));
