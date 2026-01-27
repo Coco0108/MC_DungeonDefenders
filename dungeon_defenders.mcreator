@@ -603,8 +603,7 @@
       "CUSTOM:SpikeBlockade"
     ],
     "ENTITIES:dungeon_defenders:ennemy": [
-      "CUSTOM:Gobelin",
-      "CUSTOM:Orc"
+      "CUSTOM:Gobelin"
     ]
   },
   "tab_element_order": {},
