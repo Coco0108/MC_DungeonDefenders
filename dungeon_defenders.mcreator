@@ -468,6 +468,41 @@
         ]
       },
       "path": "~/Tower"
+    },
+    {
+      "name": "GobelinIA",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gobelin_ia",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GobelinIAProcedure.java"
+        ]
+      },
+      "path": "~/Ennemies"
     }
   ],
   "variable_elements": [
@@ -509,7 +544,15 @@
     }
   ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ENTITIES:dungeon_defenders:tower": [
+      "CUSTOM:SpikeBlockade"
+    ],
+    "ENTITIES:dungeon_defenders:ennemy": [
+      "CUSTOM:Gobelin",
+      "CUSTOM:Orc"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {

@@ -33,7 +33,7 @@ public class DungeonDefendersModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<GobelinEntity>> GOBELIN = register("gobelin",
 			EntityType.Builder.<GobelinEntity>of(GobelinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.8f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<OrcEntity>> ORC = register("orc", EntityType.Builder.<OrcEntity>of(OrcEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 			.sized(1f, 2f));
