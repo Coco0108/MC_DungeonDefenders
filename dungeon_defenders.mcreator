@@ -601,7 +601,8 @@
   "tag_elements": {
     "ENTITIES:dungeon_defenders:tower": [
       "CUSTOM:SpikeBlockade"
-    ]
+    ],
+    "ENTITIES:dungeon_defenders:ennemy": []
   },
   "tab_element_order": {},
   "language_map": {
