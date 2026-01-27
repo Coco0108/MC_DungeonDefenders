@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Block;
 
+import net.mcreator.dungeondefenders.block.SpawnerBlock;
 import net.mcreator.dungeondefenders.block.ManaChestBlock;
 import net.mcreator.dungeondefenders.DungeonDefendersMod;
 
@@ -17,8 +18,10 @@ import java.util.function.Function;
 public class DungeonDefendersModBlocks {
 	public static final DeferredRegister.Blocks REGISTRY = DeferredRegister.createBlocks(DungeonDefendersMod.MODID);
 	public static final DeferredBlock<Block> MANA_CHEST;
+	public static final DeferredBlock<Block> SPAWNER;
 	static {
 		MANA_CHEST = register("mana_chest", ManaChestBlock::new);
+		SPAWNER = register("spawner", SpawnerBlock::new);
 	}
 
 	// Start of user code block custom blocks

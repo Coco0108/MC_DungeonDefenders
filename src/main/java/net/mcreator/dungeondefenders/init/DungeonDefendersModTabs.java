@@ -31,6 +31,7 @@ public class DungeonDefendersModTabs {
 				tabData.accept(DungeonDefendersModItems.MANA_RESET.get());
 				tabData.accept(DungeonDefendersModItems.CRYSTAL_SPAWN_EGG.get());
 				tabData.accept(DungeonDefendersModBlocks.MANA_CHEST.get().asItem());
+				tabData.accept(DungeonDefendersModBlocks.SPAWNER.get().asItem());
 			}).build());
 
 	@SubscribeEvent

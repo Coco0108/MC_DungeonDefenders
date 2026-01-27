@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "minecraft:block/trial_spawner_top_active",
+    "particle": "minecraft:block/trial_spawner_top_active"
+  },
+  "render_type": "solid"
+}

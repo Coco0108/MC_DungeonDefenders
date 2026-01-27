@@ -503,6 +503,60 @@
         ]
       },
       "path": "~/Ennemies"
+    },
+    {
+      "name": "SpawnEnnemies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_ennemies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/SpawnEnnemiesProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "Spawner",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dungeon_defenders/loot_table/blocks/spawner.json",
+          "src/main/resources/assets/dungeon_defenders/models/block/spawner.json",
+          "src/main/resources/assets/dungeon_defenders/blockstates/spawner.json",
+          "src/main/java/net/mcreator/dungeondefenders/block/entity/SpawnerBlockEntity.java",
+          "src/main/java/net/mcreator/dungeondefenders/block/SpawnerBlock.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/spawner.json",
+          "src/main/resources/assets/dungeon_defenders/items/spawner.json"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
     }
   ],
   "variable_elements": [
@@ -544,15 +598,7 @@
     }
   ],
   "sound_elements": [],
-  "tag_elements": {
-    "ENTITIES:dungeon_defenders:tower": [
-      "CUSTOM:SpikeBlockade"
-    ],
-    "ENTITIES:dungeon_defenders:ennemy": [
-      "CUSTOM:Gobelin",
-      "CUSTOM:Orc"
-    ]
-  },
+  "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
@@ -619,6 +665,10 @@
           },
           {
             "name": "Crystal",
+            "children": []
+          },
+          {
+            "name": "Spawner",
             "children": []
           }
         ]
