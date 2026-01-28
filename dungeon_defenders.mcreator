@@ -557,6 +557,25 @@
         ]
       },
       "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "RotationSpikeBlockade",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rotation_spike_blockade",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/RotationSpikeBlockadeProcedure.java"
+        ]
+      },
+      "path": "~/Tower"
     }
   ],
   "variable_elements": [

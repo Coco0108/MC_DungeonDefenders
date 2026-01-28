@@ -11,8 +11,6 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.dungeondefenders.DungeonDefendersMod;
-
 import java.util.Comparator;
 
 public class GobelinIAProcedure {
@@ -28,8 +26,7 @@ public class GobelinIAProcedure {
 			_entity.getNavigation().moveTo(crystalX, crystalY, crystalZ, 1);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-				DungeonDefendersMod.LOGGER.warn(("" + entityiterator));
+			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 				if (!occupied) {
 					if (entityiterator.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("dungeon_defenders:tower")))) {
 						if (entity instanceof Mob _entity)
