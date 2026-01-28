@@ -547,13 +547,47 @@
       "registry_name": "spawner",
       "metadata": {
         "files": [
-          "src/main/resources/data/dungeon_defenders/loot_table/blocks/spawner.json",
-          "src/main/resources/assets/dungeon_defenders/models/block/spawner.json",
           "src/main/resources/assets/dungeon_defenders/blockstates/spawner.json",
+          "src/main/resources/assets/dungeon_defenders/models/block/spawner.json",
+          "src/main/resources/data/dungeon_defenders/loot_table/blocks/spawner.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/spawner.json",
           "src/main/java/net/mcreator/dungeondefenders/block/entity/SpawnerBlockEntity.java",
           "src/main/java/net/mcreator/dungeondefenders/block/SpawnerBlock.java",
-          "src/main/resources/assets/dungeon_defenders/models/item/spawner.json",
           "src/main/resources/assets/dungeon_defenders/items/spawner.json"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "SpawnerGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawner_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/client/gui/SpawnerGUIScreen.java",
+          "src/main/java/net/mcreator/dungeondefenders/world/inventory/SpawnerGUIMenu.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "ShowPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ShowPlayerProcedure.java"
         ]
       },
       "path": "~/Gameplay/Spawner"
@@ -634,6 +668,9 @@
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/dungeondefenders/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModScreens.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModMenus.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlocks.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlockEntities.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModItems.java",
@@ -642,9 +679,9 @@
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java",
       "src/main/java/net/mcreator/dungeondefenders/DungeonDefendersMod.java",
-      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java"
+      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java"
     ]
   },
   "foldersRoot": {

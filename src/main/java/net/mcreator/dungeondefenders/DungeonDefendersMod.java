@@ -21,11 +21,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.dungeondefenders.network.DungeonDefendersModVariables;
-import net.mcreator.dungeondefenders.init.DungeonDefendersModTabs;
-import net.mcreator.dungeondefenders.init.DungeonDefendersModItems;
-import net.mcreator.dungeondefenders.init.DungeonDefendersModEntities;
-import net.mcreator.dungeondefenders.init.DungeonDefendersModBlocks;
-import net.mcreator.dungeondefenders.init.DungeonDefendersModBlockEntities;
+import net.mcreator.dungeondefenders.init.*;
 
 import javax.annotation.Nullable;
 
@@ -56,6 +52,7 @@ public class DungeonDefendersMod {
 		DungeonDefendersModEntities.REGISTRY.register(modEventBus);
 		DungeonDefendersModTabs.REGISTRY.register(modEventBus);
 		DungeonDefendersModVariables.ATTACHMENT_TYPES.register(modEventBus);
+		DungeonDefendersModMenus.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

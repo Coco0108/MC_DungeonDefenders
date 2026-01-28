@@ -10,13 +10,20 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.dungeondefenders.world.inventory.SpawnerGUIMenu;
 import net.mcreator.dungeondefenders.procedures.SpawnEnnemiesProcedure;
 import net.mcreator.dungeondefenders.block.entity.SpawnerBlockEntity;
+
+import io.netty.buffer.Unpooled;
 
 public class SpawnerBlock extends Block implements EntityBlock {
 	public SpawnerBlock(BlockBehaviour.Properties properties) {
@@ -31,6 +38,19 @@ public class SpawnerBlock extends Block implements EntityBlock {
 	@Override
 	public InteractionResult useWithoutItem(BlockState blockstate, Level world, BlockPos pos, Player entity, BlockHitResult hit) {
 		super.useWithoutItem(blockstate, world, pos, entity, hit);
+		if (entity instanceof ServerPlayer player) {
+			player.openMenu(new MenuProvider() {
+				@Override
+				public Component getDisplayName() {
+					return Component.literal("Spawner");
+				}
+
+				@Override
+				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+					return new SpawnerGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+				}
+			}, pos);
+		}
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
