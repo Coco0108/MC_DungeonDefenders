@@ -18,5 +18,12 @@
   "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg",
   "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
   "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
-  "item.dungeon_defenders.spawner": "Spawner"
+  "item.dungeon_defenders.spawner": "Spawner",
+  "gui.dungeon_defenders.spawner_gui.SpawnInterval": "",
+  "gui.dungeon_defenders.spawner_gui.button_confirmer": "Confirmer",
+  "gui.dungeon_defenders.spawner_gui.label_spawn_interval": "Spawn Interval",
+  "gui.dungeon_defenders.spawner_gui.Slot0Multiplier": "",
+  "gui.dungeon_defenders.spawner_gui.Slot3Multiplier": "",
+  "gui.dungeon_defenders.spawner_gui.Slot2Multiplier": "",
+  "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": ""
 }

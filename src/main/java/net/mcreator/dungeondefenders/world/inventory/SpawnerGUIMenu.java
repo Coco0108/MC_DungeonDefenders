@@ -1,12 +1,38 @@
 package net.mcreator.dungeondefenders.world.inventory;
 
-import net.mcreator.dungeondefenders.DungeonDefendersMod;
+import net.neoforged.neoforge.items.wrapper.InvWrapper;
+import net.neoforged.neoforge.items.SlotItemHandler;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.capabilities.Capabilities;
+
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.dungeondefenders.init.DungeonDefendersModMenus;
+
+import java.util.function.Supplier;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Collections;
 
 public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefendersModMenus.MenuAccessor {
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 2)
+			if (!this.containsKey(key) && this.size() >= 12)
 				return null;
 			return super.put(key, value);
 		}
@@ -26,7 +52,7 @@ public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefe
 		super(DungeonDefendersModMenus.SPAWNER_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
-		this.internal = new ItemStackHandler(2);
+		this.internal = new ItemStackHandler(4);
 		BlockPos pos = null;
 		if (extraData != null) {
 			pos = extraData.readBlockPos();
@@ -63,21 +89,31 @@ public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefe
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 23, 38) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 33, 17) {
 			private final int slot = 0;
 			private int x = SpawnerGUIMenu.this.x;
 			private int y = SpawnerGUIMenu.this.y;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 52, 38) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 93, 17) {
 			private final int slot = 1;
+			private int x = SpawnerGUIMenu.this.x;
+			private int y = SpawnerGUIMenu.this.y;
+		}));
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 153, 17) {
+			private final int slot = 2;
+			private int x = SpawnerGUIMenu.this.x;
+			private int y = SpawnerGUIMenu.this.y;
+		}));
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 213, 17) {
+			private final int slot = 3;
 			private int x = SpawnerGUIMenu.this.x;
 			private int y = SpawnerGUIMenu.this.y;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 1000 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 42 + 8 + sj * 18, 52 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 1000 + 142));
+			this.addSlot(new Slot(inv, si, 42 + 8 + si * 18, 52 + 142));
 	}
 
 	@Override
@@ -100,16 +136,16 @@ public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefe
 		if (slot != null && slot.hasItem()) {
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
-			if (index < 2) {
-				if (!this.moveItemStackTo(itemstack1, 2, this.slots.size(), true))
+			if (index < 4) {
+				if (!this.moveItemStackTo(itemstack1, 4, this.slots.size(), true))
 					return ItemStack.EMPTY;
 				slot.onQuickCraft(itemstack1, itemstack);
-			} else if (!this.moveItemStackTo(itemstack1, 0, 2, false)) {
-				if (index < 2 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 2 + 27, this.slots.size(), true))
+			} else if (!this.moveItemStackTo(itemstack1, 0, 4, false)) {
+				if (index < 4 + 27) {
+					if (!this.moveItemStackTo(itemstack1, 4 + 27, this.slots.size(), true))
 						return ItemStack.EMPTY;
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 2, 2 + 27, false))
+					if (!this.moveItemStackTo(itemstack1, 4, 4 + 27, false))
 						return ItemStack.EMPTY;
 				}
 				return ItemStack.EMPTY;
@@ -127,19 +163,85 @@ public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefe
 		return itemstack;
 	}
 
-	@Override /* failed to load code for net.minecraft.world.inventory.AbstractContainerMenu */
+	@Override
+	protected boolean moveItemStackTo(ItemStack p_38904_, int p_38905_, int p_38906_, boolean p_38907_) {
+		boolean flag = false;
+		int i = p_38905_;
+		if (p_38907_) {
+			i = p_38906_ - 1;
+		}
+		if (p_38904_.isStackable()) {
+			while (!p_38904_.isEmpty() && (p_38907_ ? i >= p_38905_ : i < p_38906_)) {
+				Slot slot = this.slots.get(i);
+				ItemStack itemstack = slot.getItem();
+				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameComponents(p_38904_, itemstack)) {
+					int j = itemstack.getCount() + p_38904_.getCount();
+					int k = slot.getMaxStackSize(itemstack);
+					if (j <= k) {
+						p_38904_.setCount(0);
+						itemstack.setCount(j);
+						slot.set(itemstack);
+						flag = true;
+					} else if (itemstack.getCount() < k) {
+						p_38904_.shrink(k - itemstack.getCount());
+						itemstack.setCount(k);
+						slot.set(itemstack);
+						flag = true;
+					}
+				}
+				if (p_38907_) {
+					i--;
+				} else {
+					i++;
+				}
+			}
+		}
+		if (!p_38904_.isEmpty()) {
+			if (p_38907_) {
+				i = p_38906_ - 1;
+			} else {
+				i = p_38905_;
+			}
+			while (p_38907_ ? i >= p_38905_ : i < p_38906_) {
+				Slot slot1 = this.slots.get(i);
+				ItemStack itemstack1 = slot1.getItem();
+				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
+					int l = slot1.getMaxStackSize(p_38904_);
+					slot1.setByPlayer(p_38904_.split(Math.min(p_38904_.getCount(), l)));
+					slot1.setChanged();
+					flag = true;
+					break;
+				}
+				if (p_38907_) {
+					i--;
+				} else {
+					i++;
+				}
+			}
+		}
+		return flag;
+	}
+
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
+					if (j == 0)
+						continue;
+					if (j == 2)
+						continue;
 					playerIn.drop(internal.getStackInSlot(j), false);
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
+					if (i == 0)
+						continue;
+					if (i == 2)
+						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
 					if (internal instanceof IItemHandlerModifiable ihm)
 						ihm.setStackInSlot(i, ItemStack.EMPTY);

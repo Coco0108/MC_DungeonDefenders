@@ -28,7 +28,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class SpawnerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(9, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(4, ItemStack.EMPTY);
 
 	public SpawnerBlockEntity(BlockPos position, BlockState state) {
 		super(DungeonDefendersModBlockEntities.SPAWNER.get(), position, state);
@@ -79,6 +79,11 @@ public class SpawnerBlockEntity extends RandomizableContainerBlockEntity impleme
 	@Override
 	public Component getDefaultName() {
 		return Component.literal("spawner");
+	}
+
+	@Override
+	public int getMaxStackSize() {
+		return 1;
 	}
 
 	@Override
