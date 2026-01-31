@@ -26,7 +26,7 @@ public class SpawnEnnemiesProcedure {
 		String ItemName = "";
 		String Command = "";
 		String EggName = "";
-		double CurrentInterval = 0;
+		double currentEgg = 0;
 		if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "CurrentInterval") == new Object() {
 			double convert(String s) {
 				try {
@@ -36,7 +36,7 @@ public class SpawnEnnemiesProcedure {
 				return 0;
 			}
 		}.convert(getBlockNBTString(world, BlockPos.containing(x, y, z), "Interval"))) {
-			ItemName = "" + itemFromBlockInventory(world, BlockPos.containing(x, y, z), 0).copy();
+			ItemName = "" + itemFromBlockInventory(world, BlockPos.containing(x, y, z), (int) currentEgg).copy();
 			if (ItemName.contains("_spawn_egg")) {
 				ItemName = ItemName.replace("_spawn_egg", "");
 				EggName = ItemName.replace("1 ", "");

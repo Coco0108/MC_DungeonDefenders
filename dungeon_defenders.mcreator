@@ -570,26 +570,6 @@
       "path": "~/Gameplay/Spawner"
     },
     {
-      "name": "ShowPlayer",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "show_player",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "return_type": "entity",
-        "files": [
-          "src/main/java/net/mcreator/dungeondefenders/procedures/ShowPlayerProcedure.java"
-        ]
-      },
-      "path": "~/Gameplay/Spawner"
-    },
-    {
       "name": "RotationSpikeBlockade",
       "type": "procedure",
       "compiles": true,
@@ -758,19 +738,19 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/dungeondefenders/network/MenuStateUpdateMessage.java",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModScreens.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModMenus.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModScreens.java",
+      "src/main/java/net/mcreator/dungeondefenders/network/MenuStateUpdateMessage.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlocks.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlockEntities.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModItems.java",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntityRenderers.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntities.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/dungeondefenders/DungeonDefendersMod.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModEntityRenderers.java",
       "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/dungeondefenders/DungeonDefendersMod.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java"
     ]
   },
