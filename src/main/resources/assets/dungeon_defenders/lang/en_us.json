@@ -25,5 +25,7 @@
   "gui.dungeon_defenders.spawner_gui.Slot0Multiplier": "",
   "gui.dungeon_defenders.spawner_gui.Slot3Multiplier": "",
   "gui.dungeon_defenders.spawner_gui.Slot2Multiplier": "",
-  "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": ""
+  "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": "",
+  "item.dungeon_defenders.mana_1": "Mana 1",
+  "item.dungeon_defenders.mana_5": "Mana 5"
 }

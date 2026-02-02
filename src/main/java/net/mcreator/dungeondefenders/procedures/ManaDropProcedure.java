@@ -65,7 +65,7 @@ public class ManaDropProcedure {
 			NumberOfRepeat = Math.floor(Value / 5);
 			for (int index4 = 0; index4 < (int) NumberOfRepeat; index4++) {
 				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DungeonDefendersModItems.MANA_TEST_5.get()));
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DungeonDefendersModItems.MANA_5.get()));
 					entityToSpawn.setPickUpDelay(600);
 					_level.addFreshEntity(entityToSpawn);
 				}
@@ -76,7 +76,7 @@ public class ManaDropProcedure {
 			NumberOfRepeat = Value;
 			for (int index5 = 0; index5 < (int) NumberOfRepeat; index5++) {
 				if (world instanceof ServerLevel _level) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DungeonDefendersModItems.MANA_TEST_1.get()));
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DungeonDefendersModItems.MANA_1.get()));
 					entityToSpawn.setPickUpDelay(600);
 					_level.addFreshEntity(entityToSpawn);
 				}

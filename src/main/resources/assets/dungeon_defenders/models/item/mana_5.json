@@ -1,0 +1,7 @@
+{
+  "parent": "dungeon_defenders:custom/mana5",
+  "textures": {
+    "0": "dungeon_defenders:block/mana5",
+    "particle": "dungeon_defenders:item/mana5"
+  }
+}
