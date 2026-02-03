@@ -28,5 +28,7 @@
   "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": "",
   "item.dungeon_defenders.mana_1": "Mana 1",
   "item.dungeon_defenders.mana_5": "Mana 5",
-  "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner"
+  "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
+  "gui.dungeon_defenders.map_choice.button_map_test": "Map Test",
+  "item.dungeon_defenders.tavern_crystal": "Tavern Crystal"
 }

@@ -35,6 +35,7 @@ public class DungeonDefendersModItems {
 	public static final DeferredItem<Item> MANA_1;
 	public static final DeferredItem<Item> MANA_5;
 	public static final DeferredItem<Item> STICK_TEST_SPAWNER;
+	public static final DeferredItem<Item> TAVERN_CRYSTAL;
 	static {
 		MANA_TEST_1 = register("mana_test_1", ManaTest1Item::new);
 		MANA_TEST_5 = register("mana_test_5", ManaTest5Item::new);
@@ -52,6 +53,7 @@ public class DungeonDefendersModItems {
 		MANA_1 = register("mana_1", Mana1Item::new);
 		MANA_5 = register("mana_5", Mana5Item::new);
 		STICK_TEST_SPAWNER = register("stick_test_spawner", StickTestSpawnerItem::new);
+		TAVERN_CRYSTAL = block(DungeonDefendersModBlocks.TAVERN_CRYSTAL, new Item.Properties().stacksTo(1).fireResistant());
 	}
 
 	// Start of user code block custom items

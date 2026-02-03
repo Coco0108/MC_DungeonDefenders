@@ -780,6 +780,64 @@
         ]
       },
       "path": "~/Gameplay"
+    },
+    {
+      "name": "ChooseMap",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choose_map",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ChooseMapProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "MapChoice",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "map_choice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/network/MapChoiceButtonMessage.java",
+          "src/main/java/net/mcreator/dungeondefenders/world/inventory/MapChoiceMenu.java",
+          "src/main/java/net/mcreator/dungeondefenders/client/gui/MapChoiceScreen.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "TavernCrystal",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tavern_crystal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/blockstates/tavern_crystal.json",
+          "src/main/java/net/mcreator/dungeondefenders/block/TavernCrystalBlock.java",
+          "src/main/java/net/mcreator/dungeondefenders/block/entity/TavernCrystalBlockEntity.java",
+          "src/main/resources/data/dungeon_defenders/loot_table/blocks/tavern_crystal.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/tavern_crystal.json",
+          "src/main/resources/assets/dungeon_defenders/items/tavern_crystal.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/block/TavernCrystalRenderer.java",
+          "src/main/resources/assets/dungeon_defenders/models/block/tavern_crystal.json"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
     }
   ],
   "variable_elements": [
@@ -862,7 +920,9 @@
       "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": "",
       "item.dungeon_defenders.mana_1": "Mana 1",
       "item.dungeon_defenders.mana_5": "Mana 5",
-      "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner"
+      "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
+      "gui.dungeon_defenders.map_choice.button_map_test": "Map Test",
+      "item.dungeon_defenders.tavern_crystal": "Tavern Crystal"
     }
   },
   "metadata": {
@@ -915,6 +975,10 @@
           },
           {
             "name": "Spawner",
+            "children": []
+          },
+          {
+            "name": "Tavern",
             "children": []
           }
         ]

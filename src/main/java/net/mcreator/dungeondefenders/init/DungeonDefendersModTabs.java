@@ -35,6 +35,7 @@ public class DungeonDefendersModTabs {
 				tabData.accept(DungeonDefendersModItems.MANA_1.get());
 				tabData.accept(DungeonDefendersModItems.MANA_5.get());
 				tabData.accept(DungeonDefendersModItems.STICK_TEST_SPAWNER.get());
+				tabData.accept(DungeonDefendersModBlocks.TAVERN_CRYSTAL.get().asItem());
 			}).build());
 
 	@SubscribeEvent

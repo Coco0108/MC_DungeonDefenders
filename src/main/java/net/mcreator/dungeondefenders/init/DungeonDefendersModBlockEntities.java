@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.dungeondefenders.block.entity.TavernCrystalBlockEntity;
 import net.mcreator.dungeondefenders.block.entity.SpawnerBlockEntity;
 import net.mcreator.dungeondefenders.DungeonDefendersMod;
 
@@ -23,6 +24,7 @@ import net.mcreator.dungeondefenders.DungeonDefendersMod;
 public class DungeonDefendersModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, DungeonDefendersMod.MODID);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SpawnerBlockEntity>> SPAWNER = register("spawner", DungeonDefendersModBlocks.SPAWNER, SpawnerBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TavernCrystalBlockEntity>> TAVERN_CRYSTAL = register("tavern_crystal", DungeonDefendersModBlocks.TAVERN_CRYSTAL, TavernCrystalBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -33,5 +35,6 @@ public class DungeonDefendersModBlockEntities {
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SPAWNER.get(), SidedInvWrapper::new);
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, TAVERN_CRYSTAL.get(), SidedInvWrapper::new);
 	}
 }

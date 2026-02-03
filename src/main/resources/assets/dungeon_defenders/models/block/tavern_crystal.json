@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dungeon_defenders:block/crystal",
+    "particle": "dungeon_defenders:block/crystal"
+  },
+  "render_type": "solid"
+}
