@@ -37,23 +37,14 @@ public class SaveSpawnerConfigProcedure {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putDouble("DifferentEggToSpawn", eggNumber);
+				_blockEntity.getPersistentData().putString("Interval", ((entity instanceof Player _entity5 && _entity5.containerMenu instanceof DungeonDefendersModMenus.MenuAccessor _menu5) ? _menu5.getMenuState(0, "SpawnInterval", "") : ""));
+				_blockEntity.getPersistentData().putDouble("CurrentInterval", 0);
 			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
-		if (!(((entity instanceof Player _entity5 && _entity5.containerMenu instanceof DungeonDefendersModMenus.MenuAccessor _menu5) ? _menu5.getMenuState(0, "SpawnInterval", "") : "").equals(""))) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null) {
-					_blockEntity.getPersistentData().putString("Interval", ((entity instanceof Player _entity6 && _entity6.containerMenu instanceof DungeonDefendersModMenus.MenuAccessor _menu6) ? _menu6.getMenuState(0, "SpawnInterval", "") : ""));
-					_blockEntity.getPersistentData().putDouble("CurrentInterval", 0);
-				}
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-		}
+		if (entity instanceof Player _player)
+			_player.closeContainer();
 	}
 
 	private static ItemStack itemFromBlockInventory(LevelAccessor world, BlockPos pos, int slot) {

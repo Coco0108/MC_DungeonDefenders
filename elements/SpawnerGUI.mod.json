@@ -196,6 +196,9 @@
         }
       }
     ],
+    "onOpen": {
+      "name": "RemplirGUI"
+    },
     "gridSettings": {
       "sx": 20,
       "sy": 18,

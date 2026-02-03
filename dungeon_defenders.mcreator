@@ -684,6 +684,102 @@
         ]
       },
       "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "RemplirGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remplir_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/RemplirGUIProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "TestSpawner",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dungeon_defenders/worldgen/structure_set/test_spawner.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/template_pool/test_spawner.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/structure/test_spawner.json"
+        ]
+      },
+      "path": "~/Gameplay"
+    },
+    {
+      "name": "StickTestSpawnerRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_test_spawner_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/StickTestSpawnerRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay"
+    },
+    {
+      "name": "StickTestSpawner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_test_spawner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/item/StickTestSpawnerItem.java",
+          "src/main/resources/assets/dungeon_defenders/items/stick_test_spawner.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/stick_test_spawner.json"
+        ]
+      },
+      "path": "~/Gameplay"
     }
   ],
   "variable_elements": [
@@ -765,7 +861,8 @@
       "gui.dungeon_defenders.spawner_gui.Slot2Multiplier": "",
       "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": "",
       "item.dungeon_defenders.mana_1": "Mana 1",
-      "item.dungeon_defenders.mana_5": "Mana 5"
+      "item.dungeon_defenders.mana_5": "Mana 5",
+      "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner"
     }
   },
   "metadata": {
