@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 300,
-    "height": 170,
+    "width": 220,
+    "height": 160,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -14,16 +14,16 @@
         "type": "button",
         "data": {
           "name": "button_map_test",
-          "text": "Map Test",
+          "text": "Select",
           "isUndecorated": false,
           "onClick": {
             "name": "ChooseMap"
           },
           "width": 66,
           "height": 20,
-          "x": 186,
+          "x": 181,
           "y": 161,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -35,12 +35,12 @@
             "name": "GetMapName"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 195,
-          "y": 143,
-          "locked": false
+          "x": 187,
+          "y": 144,
+          "locked": true
         }
       },
       {
@@ -59,7 +59,7 @@
           "height": 20,
           "x": 267,
           "y": 161,
-          "locked": false
+          "locked": true
         }
       },
       {
@@ -76,9 +76,19 @@
           },
           "width": 30,
           "height": 20,
-          "x": 141,
+          "x": 132,
           "y": 161,
-          "locked": false
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "choicemapgui.png",
+          "use1Xscale": false,
+          "x": 93,
+          "y": 33,
+          "locked": true
         }
       }
     ],
@@ -87,7 +97,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

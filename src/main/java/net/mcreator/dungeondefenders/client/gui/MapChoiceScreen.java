@@ -35,8 +35,8 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 300;
-		this.imageHeight = 170;
+		this.imageWidth = 220;
+		this.imageHeight = 160;
 	}
 
 	@Override
@@ -56,6 +56,7 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 	@Override
 	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		guiGraphics.blit(RenderPipelines.GUI_TEXTURED, ResourceLocation.parse("dungeon_defenders:textures/screens/choicemapgui.png"), this.leftPos + -11, this.topPos + -7, 0, 0, 240, 180, 240, 180);
 	}
 
 	@Override
@@ -69,7 +70,7 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, GetMapNameProcedure.execute(world, x, y, z), 131, 108, -12829636, false);
+		guiGraphics.drawString(this.font, GetMapNameProcedure.execute(world, x, y, z), 83, 104, -1, false);
 	}
 
 	@Override
@@ -82,7 +83,7 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 				ClientPacketDistributor.sendToServer(new MapChoiceButtonMessage(0, x, y, z));
 				MapChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 122, this.topPos + 126, 66, 20).build();
+		}).bounds(this.leftPos + 77, this.topPos + 121, 66, 20).build();
 		this.addRenderableWidget(button_map_test);
 		button_empty = Button.builder(Component.translatable("gui.dungeon_defenders.map_choice.button_empty"), e -> {
 			int x = MapChoiceScreen.this.x;
@@ -91,7 +92,7 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 				ClientPacketDistributor.sendToServer(new MapChoiceButtonMessage(1, x, y, z));
 				MapChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 203, this.topPos + 126, 30, 20).build();
+		}).bounds(this.leftPos + 163, this.topPos + 121, 30, 20).build();
 		this.addRenderableWidget(button_empty);
 		button_empty1 = Button.builder(Component.translatable("gui.dungeon_defenders.map_choice.button_empty1"), e -> {
 			int x = MapChoiceScreen.this.x;
@@ -100,7 +101,7 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 				ClientPacketDistributor.sendToServer(new MapChoiceButtonMessage(2, x, y, z));
 				MapChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 77, this.topPos + 126, 30, 20).build();
+		}).bounds(this.leftPos + 28, this.topPos + 121, 30, 20).build();
 		this.addRenderableWidget(button_empty1);
 	}
 
