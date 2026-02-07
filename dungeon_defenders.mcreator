@@ -1267,6 +1267,24 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "IsInGame",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "IsCombatPhase",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "EnemyLeft",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
