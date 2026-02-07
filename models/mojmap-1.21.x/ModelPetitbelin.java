@@ -82,14 +82,19 @@ public class ModelPetitbelin<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
-			float headPitch) {
-
-	}
-
-	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
 			float red, float green, float blue, float alpha) {
 		waist.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	}
+
+	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+			float headPitch) {
+		this.head.yRot = netHeadYaw / (180F / (float) Math.PI);
+		this.head.xRot = headPitch / (180F / (float) Math.PI);
+		this.rightLeg.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.rightArm.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.leftArm.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
+		this.leftLeg.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.rightItem.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
 	}
 }

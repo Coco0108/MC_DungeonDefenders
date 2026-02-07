@@ -566,8 +566,8 @@
       "registry_name": "spawner_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/client/gui/SpawnerGUIScreen.java",
-          "src/main/java/net/mcreator/dungeondefenders/world/inventory/SpawnerGUIMenu.java"
+          "src/main/java/net/mcreator/dungeondefenders/world/inventory/SpawnerGUIMenu.java",
+          "src/main/java/net/mcreator/dungeondefenders/client/gui/SpawnerGUIScreen.java"
         ]
       },
       "path": "~/Gameplay/Spawner"
@@ -593,23 +593,141 @@
       "path": "~/Gameplay/Spawner"
     },
     {
-      "name": "RotationSpikeBlockade",
+      "name": "SpikeBlockadeEgg",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_blockade_egg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/item/SpikeBlockadeEggItem.java",
+          "src/main/resources/assets/dungeon_defenders/items/spike_blockade_egg.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/spike_blockade_egg.json"
+        ]
+      },
+      "path": "~/Tower"
+    },
+    {
+      "name": "SpikeBlockadeSpawn",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rotation_spike_blockade",
+      "registry_name": "spike_blockade_spawn",
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/procedures/RotationSpikeBlockadeProcedure.java"
+          "src/main/java/net/mcreator/dungeondefenders/procedures/SpikeBlockadeSpawnProcedure.java"
         ]
       },
       "path": "~/Tower"
+    },
+    {
+      "name": "Tower",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tower"
+    },
+    {
+      "name": "Ennemy",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ennemy",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Ennemies"
+    },
+    {
+      "name": "Tavern",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tavern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dungeon_defenders/worldgen/template_pool/tavern.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/structure_set/tavern.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/structure/tavern.json"
+        ]
+      },
+      "path": "~/Maps"
+    },
+    {
+      "name": "SpawnTavern",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_tavern",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/SpawnTavernProcedure.java"
+        ]
+      },
+      "path": "~/Maps"
+    },
+    {
+      "name": "Corridor",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corridor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dungeon_defenders/worldgen/structure/corridor.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/template_pool/corridor.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/structure_set/corridor.json"
+        ]
+      },
+      "path": "~/Maps"
     }
   ],
   "variable_elements": [
@@ -648,6 +766,12 @@
       "type": "number",
       "scope": "map",
       "value": "8.0"
+    },
+    {
+      "name": "Player_HasJoinedWorld",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -682,11 +806,17 @@
       "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg",
       "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
       "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
-      "item.dungeon_defenders.spawner": "Spawner"
+      "item.dungeon_defenders.spawner": "Spawner",
+      "item.dungeon_defenders.spike_blockade_egg": "Spike Blockade Egg",
+      "item_group.dungeon_defenders.tower": "Tower",
+      "item_group.dungeon_defenders.ennemy": "Ennemy"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModScreens.java",
+      "src/main/java/net/mcreator/dungeondefenders/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModMenus.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlocks.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlockEntities.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModItems.java",

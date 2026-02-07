@@ -1,0 +1,11 @@
+{
+  "_fv": 79,
+  "_type": "tab",
+  "definition": {
+    "name": "Tower",
+    "icon": {
+      "value": "CUSTOM:SpikeBlockadeEgg"
+    },
+    "showSearch": false
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "dungeon_defenders:custom/spikeblockadeegg",
+  "textures": {
+    "0": "dungeon_defenders:block/spikeblockadeeggtexture",
+    "particle": "dungeon_defenders:item/spikeblockadeeggtexture"
+  }
+}

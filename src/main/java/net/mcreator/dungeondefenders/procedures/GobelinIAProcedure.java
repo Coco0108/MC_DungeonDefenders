@@ -17,11 +17,13 @@ public class GobelinIAProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		boolean occupied = false;
+		Entity current_tower = null;
 		double crystalX = 0;
 		double crystalY = 0;
 		double crystalZ = 0;
-		boolean occupied = false;
-		Entity current_tower = null;
+		double baseRate = 0;
+		double rateWithAmplifier = 0;
 		if (entity instanceof Mob _entity)
 			_entity.getNavigation().moveTo(crystalX, crystalY, crystalZ, 1);
 		{

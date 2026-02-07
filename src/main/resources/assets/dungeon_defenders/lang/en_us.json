@@ -18,5 +18,8 @@
   "item.dungeon_defenders.orc_spawn_egg": "Orc Spawn Egg",
   "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
   "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
-  "item.dungeon_defenders.spawner": "Spawner"
+  "item.dungeon_defenders.spawner": "Spawner",
+  "item.dungeon_defenders.spike_blockade_egg": "Spike Blockade Egg",
+  "item_group.dungeon_defenders.tower": "Tower",
+  "item_group.dungeon_defenders.ennemy": "Ennemy"
 }

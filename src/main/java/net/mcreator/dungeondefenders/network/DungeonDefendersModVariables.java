@@ -165,12 +165,14 @@ public class DungeonDefendersModVariables {
 		public double Wave_Current = 0;
 		public boolean IsGameOver = false;
 		public double ChestManaValue = 8.0;
+		public boolean Player_HasJoinedWorld = false;
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			Wave_Max = nbt.getDoubleOr("Wave_Max", 0);
 			Wave_Current = nbt.getDoubleOr("Wave_Current", 0);
 			IsGameOver = nbt.getBooleanOr("IsGameOver", false);
 			ChestManaValue = nbt.getDoubleOr("ChestManaValue", 0);
+			Player_HasJoinedWorld = nbt.getBooleanOr("Player_HasJoinedWorld", false);
 		}
 
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
@@ -178,6 +180,7 @@ public class DungeonDefendersModVariables {
 			nbt.putDouble("Wave_Current", Wave_Current);
 			nbt.putBoolean("IsGameOver", IsGameOver);
 			nbt.putDouble("ChestManaValue", ChestManaValue);
+			nbt.putBoolean("Player_HasJoinedWorld", Player_HasJoinedWorld);
 			return nbt;
 		}
 

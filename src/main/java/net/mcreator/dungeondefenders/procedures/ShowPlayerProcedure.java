@@ -1,6 +1,6 @@
 package net.mcreator.dungeondefenders.procedures;
 
-import net.neoforged.bus.api.Event;
+import net.minecraft.world.entity.Entity;
 
 public class ShowPlayerProcedure {
 	public static Entity execute(Entity entity) {
