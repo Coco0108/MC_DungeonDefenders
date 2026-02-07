@@ -16,6 +16,6 @@ public class ClearZoneProcedure {
 					"kill @e[type=!player, x=100, y=50, z=100, distance=..100]");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"/fill 100 56 100 140 70 140 air");
+					"/fill 100 55 100 140 70 140 air");
 	}
 }

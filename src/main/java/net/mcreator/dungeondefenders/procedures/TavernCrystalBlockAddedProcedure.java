@@ -14,7 +14,7 @@ public class TavernCrystalBlockAddedProcedure {
 			BlockState _bs = world.getBlockState(_bp);
 			if (_blockEntity != null) {
 				_blockEntity.getPersistentData().putDouble("mapId", 0);
-				_blockEntity.getPersistentData().putDouble("maxMapId", 2);
+				_blockEntity.getPersistentData().putDouble("mapMaxId", 1);
 			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
