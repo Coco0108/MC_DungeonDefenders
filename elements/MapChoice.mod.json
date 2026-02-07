@@ -1,0 +1,103 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 220,
+    "height": 160,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_map_test",
+          "text": "Select",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ChooseMap"
+          },
+          "width": 66,
+          "height": 20,
+          "x": 181,
+          "y": 161,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_map_name",
+          "text": {
+            "fixedValue": "",
+            "name": "GetMapName"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 187,
+          "y": 144,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": ">",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ArrowRightClick"
+          },
+          "displayCondition": {
+            "name": "GetRightArrowVisibility"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 267,
+          "y": 161,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "<",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ArrowLeftClick"
+          },
+          "displayCondition": {
+            "name": "GetLeftArrowVisibility"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 132,
+          "y": 161,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "choicemapgui.png",
+          "use1Xscale": false,
+          "x": 93,
+          "y": 33,
+          "locked": true
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

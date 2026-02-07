@@ -513,10 +513,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -567,30 +563,46 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/dungeondefenders/world/inventory/SpawnerGUIMenu.java",
-          "src/main/java/net/mcreator/dungeondefenders/client/gui/SpawnerGUIScreen.java"
+          "src/main/java/net/mcreator/dungeondefenders/client/gui/SpawnerGUIScreen.java",
+          "src/main/java/net/mcreator/dungeondefenders/network/SpawnerGUIButtonMessage.java"
         ]
       },
       "path": "~/Gameplay/Spawner"
     },
     {
-      "name": "ShowPlayer",
+      "name": "SpawnTavern",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_player",
+      "registry_name": "spawn_tavern",
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
-        "return_type": "entity",
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/procedures/ShowPlayerProcedure.java"
+          "src/main/java/net/mcreator/dungeondefenders/procedures/SpawnTavernProcedure.java"
         ]
       },
-      "path": "~/Gameplay/Spawner"
+      "path": "~/Maps"
     },
     {
       "name": "SpikeBlockadeEgg",
@@ -604,6 +616,32 @@
           "src/main/resources/assets/dungeon_defenders/items/spike_blockade_egg.json",
           "src/main/resources/assets/dungeon_defenders/models/item/spike_blockade_egg.json"
         ]
+      },
+      "path": "~/Tower"
+    },
+    {
+      "name": "Corridor",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corridor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dungeon_defenders/worldgen/structure/corridor.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/template_pool/corridor.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/structure_set/corridor.json"
+        ]
+      },
+      "path": "~/Maps"
+    },
+    {
+      "name": "Tower",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tower",
+      "metadata": {
+        "files": []
       },
       "path": "~/Tower"
     },
@@ -643,17 +681,6 @@
       "path": "~/Tower"
     },
     {
-      "name": "Tower",
-      "type": "tab",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tower",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Tower"
-    },
-    {
       "name": "Ennemy",
       "type": "tab",
       "compiles": true,
@@ -680,11 +707,26 @@
       "path": "~/Maps"
     },
     {
-      "name": "SpawnTavern",
+      "name": "Mana1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/items/mana_1.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_1.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/Mana1Item.java"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "ChooseMap",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "spawn_tavern",
+      "registry_name": "choose_map",
       "metadata": {
         "dependencies": [
           {
@@ -709,25 +751,478 @@
           }
         ],
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/procedures/SpawnTavernProcedure.java"
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ChooseMapProcedure.java"
         ]
       },
-      "path": "~/Maps"
+      "path": "~/Gameplay/Tavern"
     },
     {
-      "name": "Corridor",
+      "name": "GetLeftArrowVisibility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_left_arrow_visibility",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetLeftArrowVisibilityProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "ArrowRightClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arrow_right_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ArrowRightClickProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "Mana5",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/item/mana_5.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/Mana5Item.java",
+          "src/main/resources/assets/dungeon_defenders/items/mana_5.json"
+        ]
+      },
+      "path": "~/Gameplay/Mana"
+    },
+    {
+      "name": "TavernCrystalBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tavern_crystal_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/TavernCrystalBlockAddedProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "GetMapName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_map_name",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetMapNameProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "TestSpawner",
       "type": "structure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "corridor",
+      "registry_name": "test_spawner",
       "metadata": {
         "files": [
-          "src/main/resources/data/dungeon_defenders/worldgen/structure/corridor.json",
-          "src/main/resources/data/dungeon_defenders/worldgen/template_pool/corridor.json",
-          "src/main/resources/data/dungeon_defenders/worldgen/structure_set/corridor.json"
+          "src/main/resources/data/dungeon_defenders/worldgen/structure_set/test_spawner.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/structure/test_spawner.json",
+          "src/main/resources/data/dungeon_defenders/worldgen/template_pool/test_spawner.json"
         ]
       },
-      "path": "~/Maps"
+      "path": "~/Gameplay"
+    },
+    {
+      "name": "TavernCrystal",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tavern_crystal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/block/tavern_crystal.json",
+          "src/main/resources/assets/dungeon_defenders/items/tavern_crystal.json",
+          "src/main/resources/assets/dungeon_defenders/blockstates/tavern_crystal.json",
+          "src/main/java/net/mcreator/dungeondefenders/block/TavernCrystalBlock.java",
+          "src/main/java/net/mcreator/dungeondefenders/block/entity/TavernCrystalBlockEntity.java",
+          "src/main/resources/assets/dungeon_defenders/models/item/tavern_crystal.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/block/TavernCrystalRenderer.java",
+          "src/main/resources/data/dungeon_defenders/loot_table/blocks/tavern_crystal.json"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "ClearZone",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clear_zone",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ClearZoneProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "SaveSpawnerConfig",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_spawner_config",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/SaveSpawnerConfigProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "GetSpawnInterval",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_spawn_interval",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetSpawnIntervalProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "StickTestSpawner",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_test_spawner",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dungeon_defenders/models/item/stick_test_spawner.json",
+          "src/main/java/net/mcreator/dungeondefenders/item/StickTestSpawnerItem.java",
+          "src/main/resources/assets/dungeon_defenders/items/stick_test_spawner.json"
+        ]
+      },
+      "path": "~/Gameplay"
+    },
+    {
+      "name": "ChangeSelectedMap",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "change_selected_map",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "More",
+            "type": "logic"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ChangeSelectedMapProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "ArrowLeftClick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arrow_left_click",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/ArrowLeftClickProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "RemplirGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remplir_gui",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/RemplirGUIProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "StickTestSpawnerRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_test_spawner_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/StickTestSpawnerRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay"
+    },
+    {
+      "name": "GetRightArrowVisibility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_right_arrow_visibility",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetRightArrowVisibilityProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "MapChoice",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "map_choice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/world/inventory/MapChoiceMenu.java",
+          "src/main/java/net/mcreator/dungeondefenders/network/MapChoiceButtonMessage.java",
+          "src/main/java/net/mcreator/dungeondefenders/client/gui/MapChoiceScreen.java"
+        ]
+      },
+      "path": "~/Gameplay/Tavern"
     }
   ],
   "variable_elements": [
@@ -807,9 +1302,23 @@
       "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
       "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
       "item.dungeon_defenders.spawner": "Spawner",
+      "gui.dungeon_defenders.spawner_gui.Slot3Multiplier": "",
+      "gui.dungeon_defenders.spawner_gui.Slot0Multiplier": "",
+      "gui.dungeon_defenders.spawner_gui.label_spawn_interval": "Spawn Interval",
+      "gui.dungeon_defenders.spawner_gui.Slot2Multiplier": "",
+      "gui.dungeon_defenders.spawner_gui.button_confirmer": "Confirmer",
+      "gui.dungeon_defenders.spawner_gui.SpawnInterval": "",
+      "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": "",
       "item.dungeon_defenders.spike_blockade_egg": "Spike Blockade Egg",
       "item_group.dungeon_defenders.tower": "Tower",
-      "item_group.dungeon_defenders.ennemy": "Ennemy"
+      "item_group.dungeon_defenders.ennemy": "Ennemy",
+      "item.dungeon_defenders.mana_1": "Mana 1",
+      "item.dungeon_defenders.mana_5": "Mana 5",
+      "item.dungeon_defenders.tavern_crystal": "Tavern Crystal",
+      "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
+      "gui.dungeon_defenders.map_choice.button_empty": "\u003e",
+      "gui.dungeon_defenders.map_choice.button_map_test": "Select",
+      "gui.dungeon_defenders.map_choice.button_empty1": "\u003c"
     }
   },
   "metadata": {
@@ -848,6 +1357,10 @@
       {
         "name": "Gameplay",
         "children": [
+          {
+            "name": "Tavern",
+            "children": []
+          },
           {
             "name": "Mana",
             "children": []

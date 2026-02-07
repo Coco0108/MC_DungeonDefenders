@@ -19,7 +19,21 @@
   "item.dungeon_defenders.spike_blockade_spawn_egg": "Spike Blockade Spawn Egg",
   "entity.dungeon_defenders.spike_blockade": "Spike Blockade",
   "item.dungeon_defenders.spawner": "Spawner",
+  "gui.dungeon_defenders.spawner_gui.Slot3Multiplier": "",
+  "gui.dungeon_defenders.spawner_gui.Slot0Multiplier": "",
+  "gui.dungeon_defenders.spawner_gui.label_spawn_interval": "Spawn Interval",
+  "gui.dungeon_defenders.spawner_gui.Slot2Multiplier": "",
+  "gui.dungeon_defenders.spawner_gui.button_confirmer": "Confirmer",
+  "gui.dungeon_defenders.spawner_gui.SpawnInterval": "",
+  "gui.dungeon_defenders.spawner_gui.Slot1Multiplier": "",
   "item.dungeon_defenders.spike_blockade_egg": "Spike Blockade Egg",
   "item_group.dungeon_defenders.tower": "Tower",
-  "item_group.dungeon_defenders.ennemy": "Ennemy"
+  "item_group.dungeon_defenders.ennemy": "Ennemy",
+  "item.dungeon_defenders.mana_1": "Mana 1",
+  "item.dungeon_defenders.mana_5": "Mana 5",
+  "item.dungeon_defenders.tavern_crystal": "Tavern Crystal",
+  "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
+  "gui.dungeon_defenders.map_choice.button_empty": "\u003e",
+  "gui.dungeon_defenders.map_choice.button_map_test": "Select",
+  "gui.dungeon_defenders.map_choice.button_empty1": "\u003c"
 }

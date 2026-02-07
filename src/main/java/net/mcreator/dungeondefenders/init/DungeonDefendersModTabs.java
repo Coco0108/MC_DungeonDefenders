@@ -32,6 +32,10 @@ public class DungeonDefendersModTabs {
 				tabData.accept(DungeonDefendersModItems.CRYSTAL_SPAWN_EGG.get());
 				tabData.accept(DungeonDefendersModBlocks.MANA_CHEST.get().asItem());
 				tabData.accept(DungeonDefendersModBlocks.SPAWNER.get().asItem());
+				tabData.accept(DungeonDefendersModItems.MANA_1.get());
+				tabData.accept(DungeonDefendersModItems.MANA_5.get());
+				tabData.accept(DungeonDefendersModBlocks.TAVERN_CRYSTAL.get().asItem());
+				tabData.accept(DungeonDefendersModItems.STICK_TEST_SPAWNER.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOWER = REGISTRY.register("tower",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.dungeon_defenders.tower")).icon(() -> new ItemStack(DungeonDefendersModItems.SPIKE_BLOCKADE_EGG.get())).displayItems((parameters, tabData) -> {

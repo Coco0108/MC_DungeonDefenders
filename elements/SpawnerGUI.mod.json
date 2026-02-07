@@ -3,10 +3,10 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 166,
+    "width": 260,
+    "height": 220,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 1000,
+    "inventoryOffsetY": 25,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -23,10 +23,10 @@
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": true,
-          "x": 148,
-          "y": 74,
-          "locked": false
+          "dropItemsWhenNotBound": false,
+          "x": 116,
+          "y": 26,
+          "locked": true
         }
       },
       {
@@ -43,18 +43,168 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 177,
-          "y": 74,
-          "locked": false
+          "x": 176,
+          "y": 26,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 236,
+          "y": 26,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 296,
+          "y": 26,
+          "locked": true
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "SpawnInterval",
+          "width": 120,
+          "height": 20,
+          "x": 106,
+          "y": 116,
+          "locked": true
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_confirmer",
+          "text": "Confirmer",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SaveSpawnerConfig"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 246,
+          "y": 116,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spawn_interval",
+          "text": {
+            "fixedValue": "Spawn Interval"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 106,
+          "y": 107,
+          "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_spawn_interval",
+          "text": {
+            "fixedValue": "",
+            "name": "GetSpawnInterval"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 196,
+          "y": 107,
+          "locked": true
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "Slot0Multiplier",
+          "width": 120,
+          "height": 20,
+          "x": 116,
+          "y": 53,
+          "locked": true
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "Slot1Multiplier",
+          "width": 120,
+          "height": 20,
+          "x": 176,
+          "y": 53,
+          "locked": true
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "Slot2Multiplier",
+          "width": 120,
+          "height": 20,
+          "x": 236,
+          "y": 53,
+          "locked": true
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "Slot3Multiplier",
+          "width": 120,
+          "height": 20,
+          "x": 296,
+          "y": 53,
+          "locked": true
         }
       }
     ],
+    "onOpen": {
+      "name": "RemplirGUI"
+    },
     "gridSettings": {
-      "sx": 18,
+      "sx": 20,
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

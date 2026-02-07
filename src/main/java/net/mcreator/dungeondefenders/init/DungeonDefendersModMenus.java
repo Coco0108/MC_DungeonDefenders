@@ -17,6 +17,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dungeondefenders.world.inventory.SpawnerGUIMenu;
+import net.mcreator.dungeondefenders.world.inventory.MapChoiceMenu;
 import net.mcreator.dungeondefenders.network.MenuStateUpdateMessage;
 import net.mcreator.dungeondefenders.DungeonDefendersMod;
 
@@ -25,6 +26,7 @@ import java.util.Map;
 public class DungeonDefendersModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(Registries.MENU, DungeonDefendersMod.MODID);
 	public static final DeferredHolder<MenuType<?>, MenuType<SpawnerGUIMenu>> SPAWNER_GUI = REGISTRY.register("spawner_gui", () -> IMenuTypeExtension.create(SpawnerGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<MapChoiceMenu>> MAP_CHOICE = REGISTRY.register("map_choice", () -> IMenuTypeExtension.create(MapChoiceMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

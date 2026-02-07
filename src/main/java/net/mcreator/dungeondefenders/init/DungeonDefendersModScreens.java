@@ -9,12 +9,14 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.dungeondefenders.client.gui.SpawnerGUIScreen;
+import net.mcreator.dungeondefenders.client.gui.MapChoiceScreen;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class DungeonDefendersModScreens {
 	@SubscribeEvent
 	public static void clientLoad(RegisterMenuScreensEvent event) {
 		event.register(DungeonDefendersModMenus.SPAWNER_GUI.get(), SpawnerGUIScreen::new);
+		event.register(DungeonDefendersModMenus.MAP_CHOICE.get(), MapChoiceScreen::new);
 	}
 
 	public interface ScreenAccessor {
