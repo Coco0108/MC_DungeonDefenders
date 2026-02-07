@@ -13,6 +13,9 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dungeondefenders.world.inventory.MapChoiceMenu;
+import net.mcreator.dungeondefenders.procedures.GetRightArrowVisibilityProcedure;
+import net.mcreator.dungeondefenders.procedures.GetMapNameProcedure;
+import net.mcreator.dungeondefenders.procedures.GetLeftArrowVisibilityProcedure;
 import net.mcreator.dungeondefenders.network.MapChoiceButtonMessage;
 import net.mcreator.dungeondefenders.init.DungeonDefendersModScreens;
 
@@ -22,6 +25,8 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 	private final Player entity;
 	private boolean menuStateUpdateActive = false;
 	private Button button_map_test;
+	private Button button_empty;
+	private Button button_empty1;
 
 	public MapChoiceScreen(MapChoiceMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -64,6 +69,7 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, GetMapNameProcedure.execute(world, x, y, z), 131, 108, -12829636, false);
 	}
 
 	@Override
@@ -76,7 +82,32 @@ public class MapChoiceScreen extends AbstractContainerScreen<MapChoiceMenu> impl
 				ClientPacketDistributor.sendToServer(new MapChoiceButtonMessage(0, x, y, z));
 				MapChoiceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 14, this.topPos + 9, 66, 20).build();
+		}).bounds(this.leftPos + 122, this.topPos + 126, 66, 20).build();
 		this.addRenderableWidget(button_map_test);
+		button_empty = Button.builder(Component.translatable("gui.dungeon_defenders.map_choice.button_empty"), e -> {
+			int x = MapChoiceScreen.this.x;
+			int y = MapChoiceScreen.this.y;
+			if (GetRightArrowVisibilityProcedure.execute(world, x, y, z)) {
+				ClientPacketDistributor.sendToServer(new MapChoiceButtonMessage(1, x, y, z));
+				MapChoiceButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 203, this.topPos + 126, 30, 20).build();
+		this.addRenderableWidget(button_empty);
+		button_empty1 = Button.builder(Component.translatable("gui.dungeon_defenders.map_choice.button_empty1"), e -> {
+			int x = MapChoiceScreen.this.x;
+			int y = MapChoiceScreen.this.y;
+			if (GetLeftArrowVisibilityProcedure.execute(world, x, y, z)) {
+				ClientPacketDistributor.sendToServer(new MapChoiceButtonMessage(2, x, y, z));
+				MapChoiceButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 77, this.topPos + 126, 30, 20).build();
+		this.addRenderableWidget(button_empty1);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_empty.visible = GetRightArrowVisibilityProcedure.execute(world, x, y, z);
+		this.button_empty1.visible = GetLeftArrowVisibilityProcedure.execute(world, x, y, z);
 	}
 }

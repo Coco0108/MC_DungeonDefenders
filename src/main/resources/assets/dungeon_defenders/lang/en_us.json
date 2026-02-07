@@ -30,5 +30,7 @@
   "item.dungeon_defenders.mana_5": "Mana 5",
   "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
   "gui.dungeon_defenders.map_choice.button_map_test": "Map Test",
-  "item.dungeon_defenders.tavern_crystal": "Tavern Crystal"
+  "item.dungeon_defenders.tavern_crystal": "Tavern Crystal",
+  "gui.dungeon_defenders.map_choice.button_empty": "\u003e",
+  "gui.dungeon_defenders.map_choice.button_empty1": "\u003c"
 }

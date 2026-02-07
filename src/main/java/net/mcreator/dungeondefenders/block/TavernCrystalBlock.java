@@ -28,6 +28,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dungeondefenders.world.inventory.MapChoiceMenu;
+import net.mcreator.dungeondefenders.procedures.TavernCrystalBlockAddedProcedure;
 import net.mcreator.dungeondefenders.block.entity.TavernCrystalBlockEntity;
 
 import io.netty.buffer.Unpooled;
@@ -55,6 +56,12 @@ public class TavernCrystalBlock extends Block implements EntityBlock {
 	@Override
 	public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return Shapes.empty();
+	}
+
+	@Override
+	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onPlace(blockstate, world, pos, oldState, moving);
+		TavernCrystalBlockAddedProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

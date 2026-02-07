@@ -140,6 +140,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onBlockAdded": {
+      "name": "TavernCrystalBlockAdded"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

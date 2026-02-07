@@ -16,6 +16,8 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dungeondefenders.procedures.ChooseMapProcedure;
+import net.mcreator.dungeondefenders.procedures.ArrowRightClickProcedure;
+import net.mcreator.dungeondefenders.procedures.ArrowLeftClickProcedure;
 import net.mcreator.dungeondefenders.DungeonDefendersMod;
 
 @EventBusSubscriber
@@ -49,7 +51,15 @@ public record MapChoiceButtonMessage(int buttonID, int x, int y, int z) implemen
 			return;
 		if (buttonID == 0) {
 
-			ChooseMapProcedure.execute(world, entity);
+			ChooseMapProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
+
+			ArrowRightClickProcedure.execute(world, x, y, z);
+		}
+		if (buttonID == 2) {
+
+			ArrowLeftClickProcedure.execute(world, x, y, z);
 		}
 	}
 
