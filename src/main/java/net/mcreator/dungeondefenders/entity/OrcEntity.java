@@ -22,6 +22,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.dungeondefenders.procedures.EnnemyDieProcedure;
 import net.mcreator.dungeondefenders.init.DungeonDefendersModEntities;
 
 public class OrcEntity extends Monster {
@@ -54,6 +55,12 @@ public class OrcEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.generic.death"));
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		EnnemyDieProcedure.execute(this.level());
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {

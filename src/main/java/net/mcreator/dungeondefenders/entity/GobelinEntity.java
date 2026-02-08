@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.dungeondefenders.procedures.GobelinIAProcedure;
+import net.mcreator.dungeondefenders.procedures.EnnemyDieProcedure;
 import net.mcreator.dungeondefenders.init.DungeonDefendersModEntities;
 
 public class GobelinEntity extends Monster {
@@ -49,6 +50,12 @@ public class GobelinEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.generic.death"));
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		EnnemyDieProcedure.execute(this.level());
 	}
 
 	@Override

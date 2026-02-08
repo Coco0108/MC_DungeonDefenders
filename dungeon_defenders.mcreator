@@ -426,11 +426,11 @@
       "registry_name": "gobelin",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/client/renderer/GobelinRenderer.java",
           "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/gobelin_biome_modifier.json",
-          "src/main/java/net/mcreator/dungeondefenders/entity/GobelinEntity.java",
           "src/main/resources/assets/dungeon_defenders/models/item/gobelin_spawn_egg.json",
-          "src/main/resources/assets/dungeon_defenders/items/gobelin_spawn_egg.json"
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/GobelinRenderer.java",
+          "src/main/resources/assets/dungeon_defenders/items/gobelin_spawn_egg.json",
+          "src/main/java/net/mcreator/dungeondefenders/entity/GobelinEntity.java"
         ]
       },
       "path": "~/Ennemies"
@@ -443,10 +443,10 @@
       "registry_name": "orc",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/entity/OrcEntity.java",
-          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/orc_biome_modifier.json",
-          "src/main/java/net/mcreator/dungeondefenders/client/renderer/OrcRenderer.java",
           "src/main/resources/assets/dungeon_defenders/models/item/orc_spawn_egg.json",
+          "src/main/java/net/mcreator/dungeondefenders/client/renderer/OrcRenderer.java",
+          "src/main/resources/data/dungeon_defenders/neoforge/biome_modifier/orc_biome_modifier.json",
+          "src/main/java/net/mcreator/dungeondefenders/entity/OrcEntity.java",
           "src/main/resources/assets/dungeon_defenders/items/orc_spawn_egg.json"
         ]
       },
@@ -1340,6 +1340,44 @@
         ]
       },
       "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "UpdateEnnemyLeft",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_ennemy_left",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/UpdateEnnemyLeftProcedure.java"
+        ]
+      },
+      "path": "~/Ennemies"
+    },
+    {
+      "name": "EnnemyDie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ennemy_die",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/EnnemyDieProcedure.java"
+        ]
+      },
+      "path": "~/Ennemies"
     }
   ],
   "variable_elements": [
