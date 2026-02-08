@@ -25,7 +25,7 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 116,
-          "y": 26,
+          "y": 35,
           "locked": true
         }
       },
@@ -44,7 +44,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 176,
-          "y": 26,
+          "y": 35,
           "locked": true
         }
       },
@@ -63,7 +63,7 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 236,
-          "y": 26,
+          "y": 35,
           "locked": true
         }
       },
@@ -82,7 +82,7 @@
           },
           "dropItemsWhenNotBound": true,
           "x": 296,
-          "y": 26,
+          "y": 35,
           "locked": true
         }
       },
@@ -131,23 +131,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "name": "label_proc_get_spawn_interval",
-          "text": {
-            "fixedValue": "",
-            "name": "GetSpawnInterval"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 196,
-          "y": 107,
-          "locked": true
-        }
-      },
-      {
         "type": "textfield",
         "data": {
           "placeholder": "",
@@ -155,7 +138,7 @@
           "width": 120,
           "height": 20,
           "x": 116,
-          "y": 53,
+          "y": 62,
           "locked": true
         }
       },
@@ -167,7 +150,7 @@
           "width": 120,
           "height": 20,
           "x": 176,
-          "y": 53,
+          "y": 62,
           "locked": true
         }
       },
@@ -179,7 +162,7 @@
           "width": 120,
           "height": 20,
           "x": 236,
-          "y": 53,
+          "y": 62,
           "locked": true
         }
       },
@@ -191,8 +174,76 @@
           "width": 120,
           "height": 20,
           "x": 296,
-          "y": 53,
+          "y": 62,
           "locked": true
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_egg_name_1",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEggName0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 106,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_egg_name_2",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEggName1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 166,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_egg_name_3",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEggName2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 226,
+          "y": 17,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_egg_name_4",
+          "text": {
+            "fixedValue": "",
+            "name": "GetEggName3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 286,
+          "y": 17,
+          "locked": false
         }
       }
     ],

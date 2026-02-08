@@ -16,7 +16,7 @@ public class StickTestSpawnerItem extends Item {
 	@Override
 	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
 		InteractionResult ar = super.use(world, entity, hand);
-		StickTestSpawnerRightclickedProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
+		StickTestSpawnerRightclickedProcedure.execute(world);
 		return ar;
 	}
 }

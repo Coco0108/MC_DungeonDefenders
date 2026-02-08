@@ -37,7 +37,7 @@ public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefe
 	public final Map<String, Object> menuState = new HashMap<>() {
 		@Override
 		public Object put(String key, Object value) {
-			if (!this.containsKey(key) && this.size() >= 12)
+			if (!this.containsKey(key) && this.size() >= 15)
 				return null;
 			return super.put(key, value);
 		}
@@ -94,22 +94,22 @@ public class SpawnerGUIMenu extends AbstractContainerMenu implements DungeonDefe
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 33, 17) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 33, 26) {
 			private final int slot = 0;
 			private int x = SpawnerGUIMenu.this.x;
 			private int y = SpawnerGUIMenu.this.y;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 93, 17) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 93, 26) {
 			private final int slot = 1;
 			private int x = SpawnerGUIMenu.this.x;
 			private int y = SpawnerGUIMenu.this.y;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 153, 17) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 153, 26) {
 			private final int slot = 2;
 			private int x = SpawnerGUIMenu.this.x;
 			private int y = SpawnerGUIMenu.this.y;
 		}));
-		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 213, 17) {
+		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 213, 26) {
 			private final int slot = 3;
 			private int x = SpawnerGUIMenu.this.x;
 			private int y = SpawnerGUIMenu.this.y;

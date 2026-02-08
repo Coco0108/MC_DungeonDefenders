@@ -562,9 +562,9 @@
       "registry_name": "spawner_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dungeondefenders/world/inventory/SpawnerGUIMenu.java",
+          "src/main/java/net/mcreator/dungeondefenders/network/SpawnerGUIButtonMessage.java",
           "src/main/java/net/mcreator/dungeondefenders/client/gui/SpawnerGUIScreen.java",
-          "src/main/java/net/mcreator/dungeondefenders/network/SpawnerGUIButtonMessage.java"
+          "src/main/java/net/mcreator/dungeondefenders/world/inventory/SpawnerGUIMenu.java"
         ]
       },
       "path": "~/Gameplay/Spawner"
@@ -910,7 +910,7 @@
           "src/main/resources/data/dungeon_defenders/worldgen/template_pool/test_spawner.json"
         ]
       },
-      "path": "~/Gameplay"
+      "path": "~/Gameplay/Spawner"
     },
     {
       "name": "TavernCrystal",
@@ -999,38 +999,6 @@
       "path": "~/Gameplay/Spawner"
     },
     {
-      "name": "GetSpawnInterval",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_spawn_interval",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/dungeondefenders/procedures/GetSpawnIntervalProcedure.java"
-        ]
-      },
-      "path": "~/Gameplay/Spawner"
-    },
-    {
       "name": "StickTestSpawner",
       "type": "item",
       "compiles": true,
@@ -1038,12 +1006,12 @@
       "registry_name": "stick_test_spawner",
       "metadata": {
         "files": [
-          "src/main/resources/assets/dungeon_defenders/models/item/stick_test_spawner.json",
           "src/main/java/net/mcreator/dungeondefenders/item/StickTestSpawnerItem.java",
-          "src/main/resources/assets/dungeon_defenders/items/stick_test_spawner.json"
+          "src/main/resources/assets/dungeon_defenders/items/stick_test_spawner.json",
+          "src/main/resources/assets/dungeon_defenders/models/item/stick_test_spawner.json"
         ]
       },
-      "path": "~/Gameplay"
+      "path": "~/Gameplay/Spawner"
     },
     {
       "name": "ChangeSelectedMap",
@@ -1155,18 +1123,6 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -1175,7 +1131,7 @@
           "src/main/java/net/mcreator/dungeondefenders/procedures/StickTestSpawnerRightclickedProcedure.java"
         ]
       },
-      "path": "~/Gameplay"
+      "path": "~/Gameplay/Spawner"
     },
     {
       "name": "GetRightArrowVisibility",
@@ -1223,6 +1179,167 @@
         ]
       },
       "path": "~/Gameplay/Tavern"
+    },
+    {
+      "name": "GetEggName1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_egg_name_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetEggName1Procedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "GetEggName2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_egg_name_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetEggName2Procedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "GetEggName3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_egg_name_3",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetEggName3Procedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "GetEggName0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_egg_name_0",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetEggName0Procedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "GetEnnemyLeft",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_ennemy_left",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/GetEnnemyLeftProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
+    },
+    {
+      "name": "HUDWave",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hud_wave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/client/screens/HUDWaveOverlay.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
     }
   ],
   "variable_elements": [
@@ -1248,7 +1365,7 @@
       "name": "Wave_Current",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "IsGameOver",
@@ -1341,8 +1458,8 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModScreens.java",
       "src/main/java/net/mcreator/dungeondefenders/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModScreens.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModMenus.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlocks.java",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModBlockEntities.java",
@@ -1352,9 +1469,9 @@
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModModels.java",
       "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java",
       "src/main/java/net/mcreator/dungeondefenders/DungeonDefendersMod.java",
-      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java"
+      "src/main/java/net/mcreator/dungeondefenders/network/DungeonDefendersModVariables.java",
+      "src/main/java/net/mcreator/dungeondefenders/init/DungeonDefendersModTabs.java"
     ]
   },
   "foldersRoot": {

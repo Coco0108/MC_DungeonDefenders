@@ -15,7 +15,10 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dungeondefenders.world.inventory.SpawnerGUIMenu;
-import net.mcreator.dungeondefenders.procedures.GetSpawnIntervalProcedure;
+import net.mcreator.dungeondefenders.procedures.GetEggName3Procedure;
+import net.mcreator.dungeondefenders.procedures.GetEggName2Procedure;
+import net.mcreator.dungeondefenders.procedures.GetEggName1Procedure;
+import net.mcreator.dungeondefenders.procedures.GetEggName0Procedure;
 import net.mcreator.dungeondefenders.network.SpawnerGUIButtonMessage;
 import net.mcreator.dungeondefenders.init.DungeonDefendersModScreens;
 
@@ -115,7 +118,10 @@ public class SpawnerGUIScreen extends AbstractContainerScreen<SpawnerGUIMenu> im
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.dungeon_defenders.spawner_gui.label_spawn_interval"), 22, 97, -12829636, false);
-		guiGraphics.drawString(this.font, GetSpawnIntervalProcedure.execute(world, x, y, z), 112, 97, -12829636, false);
+		guiGraphics.drawString(this.font, GetEggName0Procedure.execute(world, x, y, z), 22, 7, -12829636, false);
+		guiGraphics.drawString(this.font, GetEggName1Procedure.execute(world, x, y, z), 82, 7, -12829636, false);
+		guiGraphics.drawString(this.font, GetEggName2Procedure.execute(world, x, y, z), 142, 7, -12829636, false);
+		guiGraphics.drawString(this.font, GetEggName3Procedure.execute(world, x, y, z), 202, 7, -12829636, false);
 	}
 
 	@Override
@@ -128,28 +134,28 @@ public class SpawnerGUIScreen extends AbstractContainerScreen<SpawnerGUIMenu> im
 				menu.sendMenuStateUpdate(entity, 0, "SpawnInterval", content, false);
 		});
 		this.addWidget(this.SpawnInterval);
-		Slot0Multiplier = new EditBox(this.font, this.leftPos + 33, this.topPos + 44, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot0Multiplier"));
+		Slot0Multiplier = new EditBox(this.font, this.leftPos + 33, this.topPos + 53, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot0Multiplier"));
 		Slot0Multiplier.setMaxLength(8192);
 		Slot0Multiplier.setResponder(content -> {
 			if (!menuStateUpdateActive)
 				menu.sendMenuStateUpdate(entity, 0, "Slot0Multiplier", content, false);
 		});
 		this.addWidget(this.Slot0Multiplier);
-		Slot1Multiplier = new EditBox(this.font, this.leftPos + 93, this.topPos + 44, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot1Multiplier"));
+		Slot1Multiplier = new EditBox(this.font, this.leftPos + 93, this.topPos + 53, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot1Multiplier"));
 		Slot1Multiplier.setMaxLength(8192);
 		Slot1Multiplier.setResponder(content -> {
 			if (!menuStateUpdateActive)
 				menu.sendMenuStateUpdate(entity, 0, "Slot1Multiplier", content, false);
 		});
 		this.addWidget(this.Slot1Multiplier);
-		Slot2Multiplier = new EditBox(this.font, this.leftPos + 153, this.topPos + 44, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot2Multiplier"));
+		Slot2Multiplier = new EditBox(this.font, this.leftPos + 153, this.topPos + 53, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot2Multiplier"));
 		Slot2Multiplier.setMaxLength(8192);
 		Slot2Multiplier.setResponder(content -> {
 			if (!menuStateUpdateActive)
 				menu.sendMenuStateUpdate(entity, 0, "Slot2Multiplier", content, false);
 		});
 		this.addWidget(this.Slot2Multiplier);
-		Slot3Multiplier = new EditBox(this.font, this.leftPos + 213, this.topPos + 44, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot3Multiplier"));
+		Slot3Multiplier = new EditBox(this.font, this.leftPos + 213, this.topPos + 53, 118, 18, Component.translatable("gui.dungeon_defenders.spawner_gui.Slot3Multiplier"));
 		Slot3Multiplier.setMaxLength(8192);
 		Slot3Multiplier.setResponder(content -> {
 			if (!menuStateUpdateActive)

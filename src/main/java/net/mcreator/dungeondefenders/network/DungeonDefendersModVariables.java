@@ -162,7 +162,7 @@ public class DungeonDefendersModVariables {
 		}, instance -> instance.save(new CompoundTag(), ctx.levelOrThrow().registryAccess())));
 		boolean _syncDirty = false;
 		public double Wave_Max = 0;
-		public double Wave_Current = 0;
+		public double Wave_Current = 0.0;
 		public boolean IsGameOver = false;
 		public double ChestManaValue = 8.0;
 		public boolean Player_HasJoinedWorld = false;
