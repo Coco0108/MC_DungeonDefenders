@@ -1,19 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "ManaOverlay",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dungeondefenders/client/screens/ManaOverlayOverlay.java"
-        ]
-      },
-      "path": "~/Gameplay/Mana"
-    },
-    {
       "name": "GetManaCurrent",
       "type": "procedure",
       "compiles": true,
@@ -1329,19 +1316,6 @@
       "path": "~/Gameplay/Spawner"
     },
     {
-      "name": "HUDWave",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hud_wave",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dungeondefenders/client/screens/HUDWaveOverlay.java"
-        ]
-      },
-      "path": "~/Gameplay/Spawner"
-    },
-    {
       "name": "UpdateEnnemyLeft",
       "type": "procedure",
       "compiles": true,
@@ -1378,6 +1352,49 @@
         ]
       },
       "path": "~/Ennemies"
+    },
+    {
+      "name": "HUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/client/screens/HUDOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "FindEggToSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "find_egg_to_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dungeondefenders/procedures/FindEggToSpawnProcedure.java"
+        ]
+      },
+      "path": "~/Gameplay/Spawner"
     }
   ],
   "variable_elements": [
@@ -1455,7 +1472,6 @@
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "gui.dungeon_defenders.mana_overlay.label_mana": "Mana : ",
       "item_group.dungeon_defenders.gameplay": "Gameplay",
       "item.dungeon_defenders.mana_test_1": "Mana Test 1",
       "item.dungeon_defenders.mana_test_5": "Mana Test 5",
@@ -1491,7 +1507,9 @@
       "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
       "gui.dungeon_defenders.map_choice.button_empty": "\u003e",
       "gui.dungeon_defenders.map_choice.button_map_test": "Select",
-      "gui.dungeon_defenders.map_choice.button_empty1": "\u003c"
+      "gui.dungeon_defenders.map_choice.button_empty1": "\u003c",
+      "gui.dungeon_defenders.hud.label_mana": "Mana : ",
+      "gui.dungeon_defenders.hud.label_ennemy_left": "Ennemy Left"
     }
   },
   "metadata": {

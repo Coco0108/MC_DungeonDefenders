@@ -1,5 +1,4 @@
 {
-  "gui.dungeon_defenders.mana_overlay.label_mana": "Mana : ",
   "item_group.dungeon_defenders.gameplay": "Gameplay",
   "item.dungeon_defenders.mana_test_1": "Mana Test 1",
   "item.dungeon_defenders.mana_test_5": "Mana Test 5",
@@ -35,5 +34,7 @@
   "item.dungeon_defenders.stick_test_spawner": "Stick Test Spawner",
   "gui.dungeon_defenders.map_choice.button_empty": "\u003e",
   "gui.dungeon_defenders.map_choice.button_map_test": "Select",
-  "gui.dungeon_defenders.map_choice.button_empty1": "\u003c"
+  "gui.dungeon_defenders.map_choice.button_empty1": "\u003c",
+  "gui.dungeon_defenders.hud.label_mana": "Mana : ",
+  "gui.dungeon_defenders.hud.label_ennemy_left": "Ennemy Left"
 }

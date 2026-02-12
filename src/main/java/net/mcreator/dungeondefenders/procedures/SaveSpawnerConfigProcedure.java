@@ -171,6 +171,11 @@ public class SaveSpawnerConfigProcedure {
 						return 0;
 					}
 				}.convert((entity instanceof Player _entity18 && _entity18.containerMenu instanceof DungeonDefendersModMenus.MenuAccessor _menu18) ? _menu18.getMenuState(0, "Slot3Multiplier", "") : ""))));
+				_blockEntity.getPersistentData().putDouble("CurrentEggSpawning", 0);
+				_blockEntity.getPersistentData().putDouble("NumberSpawnedSlot0", 0);
+				_blockEntity.getPersistentData().putDouble("NumberSpawnedSlot1", 0);
+				_blockEntity.getPersistentData().putDouble("NumberSpawnedSlot2", 0);
+				_blockEntity.getPersistentData().putDouble("NumberSpawnedSlot3", 0);
 			}
 			if (world instanceof Level _level)
 				_level.sendBlockUpdated(_bp, _bs, _bs, 3);

@@ -46,7 +46,7 @@ public class SpawnEnnemiesProcedure {
 					return 0;
 				}
 			}.convert(getBlockNBTString(world, BlockPos.containing(x, y, z), "Interval"))) {
-				EggName = "dungeon_defenders:" + getBlockNBTString(world, BlockPos.containing(x, y, z), "eggName0");
+				EggName = "dungeon_defenders:" + getBlockNBTString(world, BlockPos.containing(x, y, z), ("eggName" + new java.text.DecimalFormat("##").format(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "CurrentEggSpawning"))));
 				Command = "summon " + EggName;
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), Command);
@@ -56,9 +56,34 @@ public class SpawnEnnemiesProcedure {
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null) {
 						_blockEntity.getPersistentData().putDouble("CurrentInterval", 0);
+						_blockEntity.getPersistentData().putDouble(("NumberSpawnedSlot" + new java.text.DecimalFormat("##").format(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "CurrentEggSpawning"))),
+								(getBlockNBTNumber(world, BlockPos.containing(x, y, z), "NumberSpawnedSlot0") + 1));
 					}
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "DifferentEggToSpawn") == getBlockNBTNumber(world, BlockPos.containing(x, y, z), "CurrentEggSpawning")) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("CurrentEggSpawning", 0);
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				} else {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null) {
+							_blockEntity.getPersistentData().putDouble("CurrentEggSpawning", (getBlockNBTNumber(world, BlockPos.containing(x, y, z), "CurrentEggSpawning") + 1));
+						}
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 			}
 			if (!world.isClientSide()) {
